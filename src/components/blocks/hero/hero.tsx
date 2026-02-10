@@ -22,7 +22,7 @@ export default function HeroSection({
   const modelList = Array.isArray(models) ? (models as string[]) : [];
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-black">
+    <section className="relative min-h-[80svh] overflow-hidden bg-black sm:min-h-[100svh]">
       {/* Hero background video (no overlay). Keep inside the hero stacking context. */}
       <div
         aria-hidden
@@ -41,7 +41,7 @@ export default function HeroSection({
         </video>
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center sm:pb-24 sm:pt-16">
+      <div className="relative z-10 mx-auto flex min-h-[80svh] max-w-7xl flex-col items-center justify-center px-6 pb-14 pt-14 text-center sm:min-h-[100svh] sm:pb-24 sm:pt-16">
         {/* Center pill announcement (not dismissible) */}
         <LocaleLink href={t('pill.href')}>
           <Badge

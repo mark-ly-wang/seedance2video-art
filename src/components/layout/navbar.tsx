@@ -56,12 +56,13 @@ export function Navbar({ scroll }: NavBarProps) {
     setMounted(true);
   }, []);
 
+  const isHeroGlass = Boolean(scroll && isHome);
+
   return (
     <section
       className={cn(
-        'inset-x-0 z-40 py-3 transition-all duration-300',
-        // Marketing layout wraps Announcement + Navbar in a fixed stack.
-        // Keep Navbar visually frosted at all times on the homepage hero.
+        'inset-x-0 top-0 z-50 py-3 transition-all duration-300',
+        isHeroGlass ? 'fixed' : 'relative',
         scroll
           ? isHome
             ? 'bg-gradient-to-b from-black/45 via-black/30 to-black/10 backdrop-blur-md border-b border-white/10'
