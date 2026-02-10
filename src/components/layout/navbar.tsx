@@ -65,8 +65,8 @@ export function Navbar({ scroll }: NavBarProps) {
         isHeroGlass ? 'fixed z-50' : 'sticky z-40',
         isHeroGlass
           ? scrolled
-            ? 'bg-black/10 backdrop-blur-xl backdrop-saturate-150 border-b border-white/10'
-            : 'bg-black/5 backdrop-blur-xl backdrop-saturate-150'
+            ? 'bg-black/[0.06] backdrop-blur-lg backdrop-saturate-150 border-b border-white/10'
+            : 'bg-black/[0.03] backdrop-blur-lg backdrop-saturate-150'
           : scroll
             ? scrolled
               ? 'bg-muted/50 backdrop-blur-md border-b supports-backdrop-filter:bg-muted/50'
