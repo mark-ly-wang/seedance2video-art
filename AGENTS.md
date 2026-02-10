@@ -11,20 +11,14 @@
    - Never commit credentials, tokens, connection strings, or provider keys.
    - Avoid logging sensitive values.
 
-3) **No competitor pixel-perfect cloning.**
-   - We may reference competitors for structure/rhythm, but do not reproduce their exact components, visuals, icons, screenshots, or trade dress.
-   - Do not embed unlicensed brand logos or product screenshots.
-
-4) **Locale-aware routing only.**
+3) **Locale-aware routing only.**
    - Marketing pages live under `src/app/[locale]/(marketing)/...`.
    - Protected app pages live under `src/app/[locale]/(protected)/...`.
 
-5) **Build must pass before push.**
+4) **Build must pass before push.**
    - Run `corepack pnpm@10.26.1 -s lint` and `corepack pnpm@10.26.1 -s build`.
 
-6) **Auth CTA behavior is standardized.**
-   - If logged in → CTA goes to `Routes.Dashboard`.
-   - If logged out → CTA goes to `Routes.Login`.
+
 
 ## Project Structure & Module Organization
 Routes and server actions live in `src/app` (locale-aware pages in `[locale]`). Reusable UI sits in `src/components`—libraries like `ui/`, `magicui/`, `tailark/`, plus domain folders. Shared logic and AI workflows belong in `src/lib` and `src/ai`, while Drizzle schemas and migrations stay in `src/db`. Place transactional emails in `src/mail`, analytics providers in `src/analytics`, static assets in `public/`, operational scripts in `scripts/`, and marketing/docs content in `content/`.

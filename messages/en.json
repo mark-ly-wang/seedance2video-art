@@ -749,7 +749,9 @@
       "primary": "Start generating",
       "secondary": "See examples",
       "previewBadge": "Preview",
-      "previewHint": "We’ll showcase real generations and case studies here."
+      "previewHint": "We’ll showcase real generations and case studies here.",
+      "previewShotLabel": "Shot {index}",
+      "previewShotStatus": "Draft"
     },
     "landing": {
       "trust": {

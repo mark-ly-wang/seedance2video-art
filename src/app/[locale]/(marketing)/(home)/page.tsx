@@ -114,30 +114,32 @@ export default async function HomePage(props: HomePageProps) {
 
   return (
     <div className="flex flex-col">
-      <HeroSection primaryHref={primaryHref} secondaryHref={Routes.Features} />
+      <HeroSection primaryHref={primaryHref} secondaryHref="#showcase" />
 
-      {/* Trust strip (avoid using unlicensed logos) */}
-      <section className="px-4 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 rounded-3xl border bg-muted/30 px-6 py-10 text-center">
-          <p className="text-sm text-muted-foreground">{t('trust.title')}</p>
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {trustTags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border bg-background/70 px-3 py-1 text-sm text-foreground/90"
-              >
-                {tag}
-              </span>
-            ))}
+      {/* Trust strip */}
+      <section className="px-6 py-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col items-center gap-6 rounded-3xl border bg-background/50 px-6 py-10 text-center backdrop-blur">
+            <p className="text-sm text-muted-foreground">{t('trust.title')}</p>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {trustTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border bg-muted/20 px-3 py-1 text-sm text-foreground/90"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pain points */}
-      <section id="features" className="px-4 py-16">
-        <div className="mx-auto max-w-6xl">
+      <section id="features" className="px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
               {t('pain.title')}
             </h2>
             <p className="mt-4 text-balance text-muted-foreground">
@@ -145,11 +147,11 @@ export default async function HomePage(props: HomePageProps) {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:mt-14">
             {painItems.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl border bg-background p-6 shadow-sm"
+                className="rounded-2xl border bg-background/60 p-7 shadow-sm"
               >
                 <div className="text-lg font-semibold">{item.title}</div>
                 <div className="mt-2 text-muted-foreground">{item.desc}</div>
@@ -159,22 +161,22 @@ export default async function HomePage(props: HomePageProps) {
         </div>
       </section>
 
-      {/* Solution */}
-      <section className="bg-muted/30 px-4 py-16">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
-          <div>
-            <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
+      {/* Solution (two-column, Artlist-like rhythm) */}
+      <section className="px-6 py-20 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-6">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
               {t('solution.title')}
             </h2>
-            <p className="mt-4 text-balance text-muted-foreground">
+            <p className="mt-4 max-w-2xl text-balance text-muted-foreground">
               {t('solution.subtitle')}
             </p>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-10 space-y-4">
               {solutionItems.map((f) => (
                 <div
                   key={f.title}
-                  className="rounded-2xl border bg-background p-5"
+                  className="rounded-2xl border bg-background/60 p-6"
                 >
                   <div className="font-semibold">{f.title}</div>
                   <div className="mt-1 text-muted-foreground">{f.desc}</div>
@@ -183,27 +185,28 @@ export default async function HomePage(props: HomePageProps) {
             </div>
           </div>
 
-          {/* visual placeholder */}
-          <div className="relative overflow-hidden rounded-3xl border bg-background p-6">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.16),transparent_55%),radial-gradient(circle_at_85%_30%,rgba(236,72,153,0.12),transparent_55%),radial-gradient(circle_at_55%_85%,rgba(34,197,94,0.10),transparent_60%)]" />
-            <div className="relative">
-              <div className="text-sm font-medium text-muted-foreground">
-                {t('solution.visual.title')}
-              </div>
-              <div className="mt-4 grid gap-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="flex items-center justify-between rounded-xl border bg-background/80 px-4 py-3 backdrop-blur"
-                  >
-                    <span className="text-sm">
-                      {t('solution.visual.shotLabel', { index: i })}
-                    </span>
-                    <span className="text-xs text-muted-foreground">
-                      {t('solution.visual.action')}
-                    </span>
-                  </div>
-                ))}
+          <div className="lg:col-span-6">
+            <div className="relative overflow-hidden rounded-3xl border bg-background/60 p-6 shadow-sm">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.14),transparent_55%),radial-gradient(circle_at_85%_30%,rgba(236,72,153,0.10),transparent_55%),radial-gradient(circle_at_55%_85%,rgba(34,197,94,0.08),transparent_60%)]" />
+              <div className="relative">
+                <div className="text-sm font-medium text-muted-foreground">
+                  {t('solution.visual.title')}
+                </div>
+                <div className="mt-4 grid gap-3">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-between rounded-xl border bg-background/70 px-4 py-3 backdrop-blur"
+                    >
+                      <span className="text-sm">
+                        {t('solution.visual.shotLabel', { index: i })}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {t('solution.visual.action')}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -211,19 +214,19 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* How it works */}
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
               {t('how.title')}
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-3 lg:mt-14">
             {steps.map((s, idx) => (
               <div
                 key={s.title}
-                className="rounded-2xl border bg-background p-6"
+                className="rounded-2xl border bg-background/60 p-7"
               >
                 <div className="text-sm text-muted-foreground">
                   {t('how.stepLabel', { index: idx + 1 })}
@@ -237,10 +240,10 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* Showcase */}
-      <section id="showcase" className="bg-muted/30 px-4 py-16">
-        <div className="mx-auto max-w-6xl">
+      <section id="showcase" className="px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
               {t('showcase.title')}
             </h2>
             <p className="mt-4 text-balance text-muted-foreground">
@@ -248,19 +251,23 @@ export default async function HomePage(props: HomePageProps) {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-3 lg:mt-14">
             {showcaseCards.map((c) => (
               <div
                 key={c.title}
-                className="rounded-2xl border bg-background p-4"
+                className="group overflow-hidden rounded-2xl border bg-background/60"
               >
-                <div className="aspect-[9/16] w-full overflow-hidden rounded-xl border bg-muted" />
-                <div className="mt-4 flex items-center justify-between">
-                  <div className="font-semibold">{c.title}</div>
-                  <div className="text-sm text-muted-foreground">{c.meta}</div>
-                </div>
-                <div className="mt-2 text-sm text-muted-foreground">
-                  {t('showcase.cardHint')}
+                <div className="aspect-[9/16] w-full bg-muted" />
+                <div className="p-5">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="font-semibold">{c.title}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {c.meta}
+                    </div>
+                  </div>
+                  <div className="mt-2 text-sm text-muted-foreground">
+                    {t('showcase.cardHint')}
+                  </div>
                 </div>
               </div>
             ))}
@@ -278,18 +285,20 @@ export default async function HomePage(props: HomePageProps) {
       <FaqSection />
 
       {/* Final CTA */}
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-6xl rounded-3xl border bg-background p-10 text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            {t('final.title')}
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-balance text-muted-foreground">
-            {t('final.subtitle')}
-          </p>
-          <div className="mt-8 flex justify-center">
-            <Button asChild size="lg" className="rounded-xl px-6">
-              <LocaleLink href={primaryHref}>{t('final.cta')}</LocaleLink>
-            </Button>
+      <section className="px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="rounded-3xl border bg-background/60 p-10 text-center shadow-sm">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              {t('final.title')}
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-balance text-muted-foreground">
+              {t('final.subtitle')}
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg" className="rounded-xl px-6">
+                <LocaleLink href={primaryHref}>{t('final.cta')}</LocaleLink>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

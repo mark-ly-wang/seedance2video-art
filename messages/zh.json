@@ -749,7 +749,9 @@
       "primary": "免费开始生成",
       "secondary": "查看示例视频",
       "previewBadge": "预览占位",
-      "previewHint": "上线后这里展示真实生成结果与案例。"
+      "previewHint": "上线后这里展示真实生成结果与案例。",
+      "previewShotLabel": "镜头 {index}",
+      "previewShotStatus": "草稿"
     },
     "landing": {
       "trust": {
