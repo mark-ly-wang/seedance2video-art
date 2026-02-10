@@ -745,7 +745,7 @@
     "description": "Make AI SaaS in days, simply and effortlessly",
     "hero": {
       "title": "Generate commercial-ready AI video in one click",
-      "description": "Multi-shot storytelling with stronger character and scene consistency.",
+      "description": "More stable multi-shot storytelling with better character and scene consistency.",
       "primary": "Start generating",
       "secondary": "See examples",
       "previewBadge": "Preview",
@@ -763,28 +763,28 @@
       },
       "pain": {
         "title": "The biggest problem isn’t quality — it’s control.",
-        "subtitle": "Most AI video feels like gacha: weak storytelling, drifting characters/scenes, and expensive rework — hard to use reliably for business.",
+        "subtitle": "Most AI video still feels like rolling the dice: weak storytelling, drifting characters/scenes, and expensive rework — hard to use reliably for business.",
         "items": {
           "item-1": {
-            "title": "Gacha costs",
-            "desc": "You retry the same prompt again and again; randomness eats your time and budget."
+            "title": "Randomness tax",
+            "desc": "You run the same prompt again and again; luck eats your time and budget."
           },
           "item-2": {
-            "title": "No director’s rhythm",
-            "desc": "Pacing is messy; the message doesn’t land; it feels like stitched fragments."
+            "title": "No director’s pacing",
+            "desc": "The rhythm is off; the message doesn’t land; it feels like stitched fragments."
           },
           "item-3": {
             "title": "Character drift",
-            "desc": "Faces/wardrobe/vibe change across shots, causing repeated rework."
+            "desc": "Faces, wardrobe, and vibe change across shots — leading to repeated rework."
           },
           "item-4": {
             "title": "Scene drift",
-            "desc": "Lighting/color/texture shifts; it doesn’t look like one cohesive ad."
+            "desc": "Lighting, color, and texture shift — it no longer looks like one cohesive ad."
           }
         }
       },
       "solution": {
-        "title": "Turn gacha generation into controllable iteration.",
+        "title": "Turn luck-based generation into controllable iteration.",
         "subtitle": "We don’t promise 100% perfect consistency. We reduce drift with multi-shot storytelling and consistency mechanisms — and cut rework with partial re-generation.",
         "items": {
           "item-1": {
@@ -803,7 +803,7 @@
         "visual": {
           "title": "Example: same script, multi-shot output",
           "shotLabel": "Shot {index}",
-          "action": "Re-do"
+          "action": "Regenerate"
         }
       },
       "how": {
@@ -836,7 +836,7 @@
         }
       },
       "final": {
-        "title": "Start now — generate a deliverable video",
+        "title": "Start now — generate a production-ready video",
         "subtitle": "Built for commercial use: more stable multi-shot storytelling and stronger consistency with less rework.",
         "cta": "Start generating"
       }
