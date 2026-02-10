@@ -117,7 +117,7 @@ export default async function HomePage(props: HomePageProps) {
       <HeroSection primaryHref={primaryHref} secondaryHref="#showcase" />
 
       {/* Trust strip */}
-      <section className="px-6 py-10">
+      <section className="bg-background px-6 py-10">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col items-center gap-6 rounded-3xl border bg-background/50 px-6 py-10 text-center backdrop-blur">
             <p className="text-sm text-muted-foreground">{t('trust.title')}</p>
@@ -136,7 +136,7 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* Pain points */}
-      <section id="features" className="px-6 py-20 sm:py-24">
+      <section id="features" className="bg-background px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -162,7 +162,7 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* Solution (two-column, Artlist-like rhythm) */}
-      <section className="px-6 py-20 sm:py-24">
+      <section className="bg-background px-6 py-20 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -214,7 +214,7 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* How it works */}
-      <section className="px-6 py-20 sm:py-24">
+      <section className="bg-background px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -240,7 +240,7 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* Showcase */}
-      <section id="showcase" className="px-6 py-20 sm:py-24">
+      <section id="showcase" className="bg-background px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -285,7 +285,7 @@ export default async function HomePage(props: HomePageProps) {
       <FaqSection />
 
       {/* Final CTA */}
-      <section className="px-6 py-20 sm:py-24">
+      <section className="bg-background px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-3xl border bg-background/60 p-10 text-center shadow-sm">
             <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">

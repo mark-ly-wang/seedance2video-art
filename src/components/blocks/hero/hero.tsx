@@ -16,13 +16,14 @@ export default function HeroSection({
   secondaryHref = '/#showcase',
 }: HeroSectionProps) {
   const t = useTranslations('HomePage.hero');
+
   const models = t.raw('models') as unknown;
   const modelList = Array.isArray(models) ? (models as string[]) : [];
 
   return (
-    <section className="relative">
-      {/* Full-bleed background video */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+    <section className="relative min-h-[100svh]">
+      {/* Fixed background video so it sits behind announcement + navbar */}
+      <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden">
         <video
           className="h-full w-full object-cover"
           autoPlay
@@ -34,12 +35,12 @@ export default function HeroSection({
         >
           <source src="/media/hero-bg.mp4" type="video/mp4" />
         </video>
-        {/* Dark overlay for legibility */}
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(0,0,0,0.0),rgba(0,0,0,0.65))]" />
+        {/* overlay for legibility */}
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(0,0,0,0.15),rgba(0,0,0,0.8))]" />
       </div>
 
-      <div className="mx-auto flex max-w-7xl flex-col items-center px-6 pb-16 pt-20 text-center sm:pb-20 sm:pt-24 lg:pb-24 lg:pt-28">
+      <div className="mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center sm:pb-24 sm:pt-16">
         <h1 className="text-balance font-bricolage-grotesque text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
           {t('title')}
         </h1>
@@ -70,7 +71,7 @@ export default function HeroSection({
         </div>
 
         {/* Model strip */}
-        <div className="mt-12 w-full max-w-4xl">
+        <div className="mt-12 w-full max-w-5xl">
           <div className="rounded-full border border-white/15 bg-white/5 px-5 py-3 backdrop-blur-md">
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/80">
               {modelList.map((name) => (

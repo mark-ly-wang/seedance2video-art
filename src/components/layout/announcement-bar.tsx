@@ -1,71 +1,41 @@
 'use client';
 
-import { cn } from '@/lib/utils';
-import { X } from 'lucide-react';
+import { Banner } from 'fumadocs-ui/components/banner';
 import { useTranslations } from 'next-intl';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
-type AnnouncementBarProps = {
-  storageKey?: string;
-  className?: string;
-};
-
-export function AnnouncementBar({
-  storageKey = 'announcement:home:v1:dismissed',
-  className,
-}: AnnouncementBarProps) {
+/**
+ * Marketing announcement bar (dismissible).
+ *
+ * Rules:
+ * - Reuse existing library component (fumadocs Banner) instead of inventing a new close mechanism.
+ * - Dismissal resets daily by using a date-scoped banner id.
+ */
+export function AnnouncementBar() {
   const t = useTranslations('Marketing.announcement');
-  const [dismissed, setDismissed] = useState(true);
 
-  const href = useMemo(() => {
-    const raw = t.raw('href');
-    return typeof raw === 'string' ? raw : '#';
-  }, [t]);
+  const bannerId = useMemo(() => {
+    const d = new Date();
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    return `marketing-${yyyy}-${mm}-${dd}`;
+  }, []);
 
-  useEffect(() => {
-    try {
-      const v = localStorage.getItem(storageKey);
-      setDismissed(v === '1');
-    } catch {
-      setDismissed(false);
-    }
-  }, [storageKey]);
-
-  if (dismissed) return null;
+  // Banner reads localStorage key: nd-banner-${id}
+  // By changing id daily we make the banner re-appear each day.
 
   return (
-    <div
-      className={cn(
-        'w-full border-b bg-background/60 backdrop-blur-md',
-        'supports-[backdrop-filter]:bg-background/50',
-        className
-      )}
+    <Banner
+      id={bannerId}
+      changeLayout={true}
+      height="2.75rem"
+      className="border-b border-white/10 bg-black/35 text-white/90 backdrop-blur-md"
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 text-sm">
-        <a
-          href={href}
-          className="truncate text-foreground/90 hover:text-foreground"
-        >
-          <span className="font-medium">{t('text')}</span>
-          <span className="ml-2 text-foreground/70">{t('cta')}</span>
-        </a>
-
-        <button
-          type="button"
-          aria-label={t('close')}
-          className="rounded-md p-1 text-muted-foreground hover:bg-muted hover:text-foreground"
-          onClick={() => {
-            setDismissed(true);
-            try {
-              localStorage.setItem(storageKey, '1');
-            } catch {
-              // ignore
-            }
-          }}
-        >
-          <X className="size-4" />
-        </button>
-      </div>
-    </div>
+      <a href={t('href')} className="truncate">
+        <span className="font-medium">{t('text')}</span>
+        <span className="ml-2 text-white/75">{t('cta')}</span>
+      </a>
+    </Banner>
   );
 }
