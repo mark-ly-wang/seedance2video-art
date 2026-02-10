@@ -22,11 +22,11 @@ export default function HeroSection({
   const modelList = Array.isArray(models) ? (models as string[]) : [];
 
   return (
-    <section className="relative min-h-[80svh] overflow-hidden bg-black sm:min-h-[100svh]">
+    <section className="relative overflow-hidden bg-black sm:min-h-[100svh]">
       {/* Hero background video (no overlay). Keep inside the hero stacking context. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-black"
+        className="pointer-events-none relative z-0 aspect-video w-full overflow-hidden bg-black sm:absolute sm:inset-0 sm:aspect-auto"
       >
         <video
           className="h-full w-full object-cover"
@@ -41,7 +41,7 @@ export default function HeroSection({
         </video>
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[80svh] max-w-7xl flex-col items-center justify-center px-6 pb-14 pt-14 text-center sm:min-h-[100svh] sm:pb-24 sm:pt-16">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pb-14 pt-10 text-center sm:min-h-[100svh] sm:justify-center sm:pb-24 sm:pt-16">
         {/* Center pill announcement (not dismissible) */}
         <LocaleLink href={t('pill.href')}>
           <Badge
@@ -56,7 +56,7 @@ export default function HeroSection({
           </Badge>
         </LocaleLink>
 
-        <h1 className="text-balance font-bricolage-grotesque text-5xl leading-[1.05] tracking-tight text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+        <h1 className="text-balance font-bricolage-grotesque text-4xl leading-[1.05] tracking-tight text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
           {t('title')}
         </h1>
 
