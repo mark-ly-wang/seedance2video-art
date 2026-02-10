@@ -59,12 +59,12 @@ export function Navbar({ scroll }: NavBarProps) {
   return (
     <section
       className={cn(
-        'inset-x-0 z-40 py-4 transition-all duration-300',
+        'inset-x-0 z-40 py-3 transition-all duration-300',
         // Marketing layout wraps Announcement + Navbar in a fixed stack.
         // Keep Navbar visually frosted at all times on the homepage hero.
         scroll
           ? isHome
-            ? 'bg-black/20 backdrop-blur-md border-b border-white/10'
+            ? 'bg-gradient-to-b from-black/45 via-black/30 to-black/10 backdrop-blur-md border-b border-white/10'
             : scrolled
               ? 'bg-muted/60 backdrop-blur-md border-b supports-backdrop-filter:bg-muted/50'
               : 'bg-background/40 backdrop-blur-md border-b border-border/60'

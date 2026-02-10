@@ -29,8 +29,8 @@ export function AnnouncementBar() {
     <Banner
       id={bannerId}
       changeLayout={true}
-      height="2.75rem"
-      className="border-b border-white/10 bg-black/35 text-white/90 backdrop-blur-md"
+      height="3.5rem"
+      className="border-b border-white/10 bg-black/40 text-white/95 backdrop-blur-md"
     >
       <a href={t('href')} className="truncate">
         <span className="font-medium">{t('text')}</span>

@@ -21,9 +21,12 @@ export default function HeroSection({
   const modelList = Array.isArray(models) ? (models as string[]) : [];
 
   return (
-    <section className="relative min-h-[100svh]">
+    <section className="relative min-h-[100svh] bg-black">
       {/* Fixed background video so it sits behind announcement + navbar */}
-      <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden">
+      <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden bg-black">
+        {/* Keep a solid black layer behind the video to avoid white/OG flashes */}
+        <div className="absolute inset-0 bg-black" />
+
         <video
           className="h-full w-full object-cover"
           autoPlay
@@ -31,10 +34,10 @@ export default function HeroSection({
           loop
           playsInline
           preload="auto"
-          poster="/og.png"
         >
           <source src="/media/hero-bg.mp4" type="video/mp4" />
         </video>
+
         {/* overlay for legibility */}
         <div className="absolute inset-0 bg-black/55" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(0,0,0,0.15),rgba(0,0,0,0.8))]" />
