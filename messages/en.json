@@ -744,11 +744,12 @@
     "title": "MkSaaS",
     "description": "Make AI SaaS in days, simply and effortlessly",
     "hero": {
-      "title": "Make AI SaaS in days, simply and effortlessly",
-      "description": "The is a demo website built with MkSaaS, a Next.js SaaS boilerplate to help you build your AI SaaS faster and better.",
-      "introduction": "Introducing MkSaaS Boilerplate",
-      "primary": "Get Started",
-      "secondary": "See Demo"
+      "title": "Generate commercial-ready AI video in one click",
+      "description": "Multi-shot storytelling with stronger character and scene consistency.",
+      "primary": "Start generating",
+      "secondary": "See examples",
+      "previewBadge": "Preview",
+      "previewHint": "We’ll showcase real generations and case studies here."
     },
     "logocloud": {
       "title": "Your favorite companies are our partners"
@@ -861,27 +862,27 @@
     },
     "faqs": {
       "title": "FAQ",
-      "subtitle": "Frequently Asked Questions",
+      "subtitle": "Commercial use, consistency and delivery",
       "items": {
         "item-1": {
-          "question": "Do you offer a free trial?",
-          "answer": "Yes, we offer a 7-day free trial."
+          "question": "Can I use the generated videos commercially / for ads?",
+          "answer": "We build for delivery and ad creatives, with export and traceable generation records. Final compliance still depends on your inputs and platform/client requirements."
         },
         "item-2": {
-          "question": "How do I cancel my subscription?",
-          "answer": "You can cancel your subscription by visiting the billing page."
+          "question": "Will characters and scenes be perfectly consistent?",
+          "answer": "We don’t promise 100% perfect consistency. We reduce drift with multi-shot storytelling and consistency mechanisms, and you can re-generate only the parts you dislike to cut rework."
         },
         "item-3": {
-          "question": "Can I change my plan?",
-          "answer": "Yes, you can change your plan at any time by visiting the billing page."
+          "question": "How long does generation take? What if it fails?",
+          "answer": "Time varies by length, shot count and load. We provide progress and retry/re-generate options so you don’t have to start over every time."
         },
         "item-4": {
-          "question": "What is the refund policy?",
-          "answer": "We offer a 30-day money-back guarantee if you are not happy with our product."
+          "question": "What inputs are supported?",
+          "answer": "Text-to-video, and first-frame image-to-video (upload a first frame + prompt)."
         },
         "item-5": {
-          "question": "Can't find what you're looking for?",
-          "answer": "Please contact our customer support team at support@mksaas.com"
+          "question": "How should I write prompts for more stable results?",
+          "answer": "Use a clear structure: subject + scene + action + camera language (shot size/movement) + style + constraints (don’ts). We’ll also guide prompt quality in-product."
         }
       }
     },
