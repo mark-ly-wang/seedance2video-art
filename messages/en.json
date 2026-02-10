@@ -412,6 +412,12 @@
       "billing": "Billing",
       "credits": "Credits",
       "settings": "Settings"
+    },
+    "announcement": {
+      "text": "Win $60,000 in our ad challenge",
+      "cta": "Learn more →",
+      "href": "#",
+      "close": "Close"
     }
   },
   "Dashboard": {
@@ -748,10 +754,16 @@
       "description": "More stable multi-shot storytelling with better character and scene consistency.",
       "primary": "Start generating",
       "secondary": "See examples",
-      "previewBadge": "Preview",
-      "previewHint": "We’ll showcase real generations and case studies here.",
-      "previewShotLabel": "Shot {index}",
-      "previewShotStatus": "Draft"
+      "models": [
+        "Sora",
+        "Veo",
+        "Kling",
+        "Seedance",
+        "Seedream",
+        "Flux",
+        "ElevenLabs"
+      ],
+      "modelsHint": "Model support shown here is placeholder and will be adjusted once integrations are confirmed."
     },
     "landing": {
       "trust": {
@@ -832,9 +844,18 @@
         "cardHint": "Supports partial re-generation and version comparison",
         "cta": "Start generating",
         "cards": {
-          "card-1": { "title": "New arrival", "meta": "10 shots · 15s" },
-          "card-2": { "title": "Promotion", "meta": "12 shots · 30s" },
-          "card-3": { "title": "Script-to-ad", "meta": "8 shots · 15s" }
+          "card-1": {
+            "title": "New arrival",
+            "meta": "10 shots · 15s"
+          },
+          "card-2": {
+            "title": "Promotion",
+            "meta": "12 shots · 30s"
+          },
+          "card-3": {
+            "title": "Script-to-ad",
+            "meta": "8 shots · 15s"
+          }
         }
       },
       "final": {

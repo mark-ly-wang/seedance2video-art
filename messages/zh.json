@@ -412,6 +412,12 @@
       "billing": "账单",
       "credits": "积分",
       "settings": "设置"
+    },
+    "announcement": {
+      "text": "赢取 $60,000 广告挑战赛奖励",
+      "cta": "了解详情 →",
+      "href": "#",
+      "close": "关闭"
     }
   },
   "Dashboard": {
@@ -748,10 +754,16 @@
       "description": "多镜头叙事更稳，人物与场景更一致。",
       "primary": "免费开始生成",
       "secondary": "查看示例视频",
-      "previewBadge": "预览占位",
-      "previewHint": "上线后这里展示真实生成结果与案例。",
-      "previewShotLabel": "镜头 {index}",
-      "previewShotStatus": "草稿"
+      "models": [
+        "Sora",
+        "Veo",
+        "Kling",
+        "Seedance",
+        "Seedream",
+        "Flux",
+        "ElevenLabs"
+      ],
+      "modelsHint": "模型支持展示为占位，后续按实际接入调整。"
     },
     "landing": {
       "trust": {
@@ -765,7 +777,7 @@
       },
       "pain": {
         "title": "AI 视频最大的问题不是画质，是不可控。",
-        "subtitle": "很多人做视频靠抽卡：分镜没导演感，人物与场景容易漂移，返工成本高，难以稳定商用。",
+        "subtitle": "很多人做视频靠抽卡：分镜缺乏导演感，人物与场景容易漂移，返工成本高，难以稳定商用。",
         "items": {
           "item-1": {
             "title": "抽卡成本高",
@@ -812,12 +824,18 @@
         "title": "三步，从想法到可交付视频",
         "stepLabel": "Step {index}",
         "steps": {
-          "step-1": { "title": "输入", "desc": "一句话/脚本，或上传首帧图。" },
+          "step-1": {
+            "title": "输入",
+            "desc": "一句话/脚本，或上传首帧图。"
+          },
           "step-2": {
             "title": "生成",
             "desc": "得到多镜头成片；不满意可局部重做。"
           },
-          "step-3": { "title": "导出", "desc": "直接用于投放素材或交片交付。" }
+          "step-3": {
+            "title": "导出",
+            "desc": "直接用于投放素材或交片交付。"
+          }
         }
       },
       "showcase": {
@@ -826,9 +844,18 @@
         "cardHint": "支持局部重做与版本对比",
         "cta": "免费开始生成",
         "cards": {
-          "card-1": { "title": "电商上新", "meta": "10 镜头 · 15s" },
-          "card-2": { "title": "促销活动", "meta": "12 镜头 · 30s" },
-          "card-3": { "title": "口播转广告", "meta": "8 镜头 · 15s" }
+          "card-1": {
+            "title": "电商上新",
+            "meta": "10 镜头 · 15s"
+          },
+          "card-2": {
+            "title": "促销活动",
+            "meta": "12 镜头 · 30s"
+          },
+          "card-3": {
+            "title": "口播转广告",
+            "meta": "8 镜头 · 15s"
+          }
         }
       },
       "final": {

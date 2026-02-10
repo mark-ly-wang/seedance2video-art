@@ -46,6 +46,7 @@ export function Navbar({ scroll }: NavBarProps) {
   const scrolled = useScroll(50);
   const menuLinks = useNavbarLinks();
   const localePathname = useLocalePathname();
+  const isHome = localePathname === '/';
   const [mounted, setMounted] = useState(false);
   const { data: session, isPending } = authClient.useSession();
   const currentUser = session?.user;
@@ -62,7 +63,9 @@ export function Navbar({ scroll }: NavBarProps) {
         scroll
           ? scrolled
             ? 'bg-muted/50 backdrop-blur-md border-b supports-backdrop-filter:bg-muted/50'
-            : 'bg-transparent'
+            : isHome
+              ? 'bg-gradient-to-b from-background/30 to-transparent backdrop-blur-md supports-backdrop-filter:bg-background/20'
+              : 'bg-transparent'
           : 'border-b bg-muted/50'
       )}
     >
