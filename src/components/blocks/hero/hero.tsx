@@ -22,12 +22,12 @@ export default function HeroSection({
   const modelList = Array.isArray(models) ? (models as string[]) : [];
 
   return (
-    <section className="relative min-h-[100svh] bg-black">
-      {/* Fixed background video behind navbar */}
-      <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden bg-black">
-        {/* Solid base to avoid flashes before video is ready */}
-        <div className="absolute inset-0 bg-black" />
-
+    <section className="relative min-h-[100svh] overflow-hidden bg-black">
+      {/* Hero background video (no overlay). Keep inside the hero stacking context. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-black"
+      >
         <video
           className="h-full w-full object-cover"
           autoPlay
@@ -41,7 +41,7 @@ export default function HeroSection({
         </video>
       </div>
 
-      <div className="mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center sm:pb-24 sm:pt-16">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center sm:pb-24 sm:pt-16">
         {/* Center pill announcement (not dismissible) */}
         <LocaleLink href={t('pill.href')}>
           <Badge
