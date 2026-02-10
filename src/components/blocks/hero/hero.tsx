@@ -1,7 +1,7 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
@@ -23,9 +23,9 @@ export default function HeroSection({
 
   return (
     <section className="relative min-h-[100svh] bg-black">
-      {/* Fixed background video so it sits behind announcement + navbar */}
+      {/* Fixed background video behind navbar */}
       <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden bg-black">
-        {/* Keep a solid black layer behind the video to avoid white/OG flashes */}
+        {/* Solid base to avoid flashes before video is ready */}
         <div className="absolute inset-0 bg-black" />
 
         <video
@@ -39,10 +39,6 @@ export default function HeroSection({
         >
           <source src="/media/hero-bg.mp4" type="video/mp4" />
         </video>
-
-        {/* overlay for legibility */}
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(0,0,0,0.15),rgba(0,0,0,0.8))]" />
       </div>
 
       <div className="mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center sm:pb-24 sm:pt-16">
@@ -51,20 +47,20 @@ export default function HeroSection({
           <Badge
             variant="outline"
             className={cn(
-              'mb-6 border-white/20 bg-white/5 px-4 py-1.5 text-white/85 backdrop-blur-md',
-              'hover:bg-white/10'
+              'mb-6 border-white/20 bg-white/10 px-4 py-1.5 text-white/90 backdrop-blur-md',
+              'hover:bg-white/15'
             )}
           >
             <span className="mr-2">{t('pill.text')}</span>
-            <span className="text-white/70">{t('pill.cta')}</span>
+            <span className="text-white/75">{t('pill.cta')}</span>
           </Badge>
         </LocaleLink>
 
-        <h1 className="text-balance font-bricolage-grotesque text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+        <h1 className="text-balance font-bricolage-grotesque text-5xl leading-[1.05] tracking-tight text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
           {t('title')}
         </h1>
 
-        <p className="mt-5 max-w-3xl text-balance text-lg text-white/80">
+        <p className="mt-5 max-w-3xl text-balance text-lg text-white/85 drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)]">
           {t('description')}
         </p>
 
@@ -91,18 +87,20 @@ export default function HeroSection({
 
         {/* Model strip */}
         <div className="mt-12 w-full max-w-5xl">
-          <div className="rounded-full border border-white/15 bg-white/5 px-5 py-3 backdrop-blur-md">
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/80">
+          <div className="rounded-full border border-white/15 bg-white/10 px-5 py-3 backdrop-blur-md">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/85">
               {modelList.map((name) => (
                 <span key={name} className="inline-flex items-center gap-2">
-                  <span className="size-1.5 rounded-full bg-white/60" />
+                  <span className="size-1.5 rounded-full bg-white/70" />
                   <span className="font-medium">{name}</span>
                 </span>
               ))}
             </div>
           </div>
 
-          <div className="mt-4 text-xs text-white/60">{t('modelsHint')}</div>
+          <div className="mt-4 text-xs text-white/70 drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)]">
+            {t('modelsHint')}
+          </div>
         </div>
       </div>
     </section>
