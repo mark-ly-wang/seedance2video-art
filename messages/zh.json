@@ -763,7 +763,12 @@
         "Flux",
         "ElevenLabs"
       ],
-      "modelsHint": "模型支持展示为占位，后续按实际接入调整。"
+      "modelsHint": "模型支持展示为占位，后续按实际接入调整。",
+      "pill": {
+        "text": "即梦2.0模型已上线",
+        "cta": "了解详情 →",
+        "href": "#showcase"
+      }
     },
     "landing": {
       "trust": {

@@ -763,7 +763,12 @@
         "Flux",
         "ElevenLabs"
       ],
-      "modelsHint": "Model support shown here is placeholder and will be adjusted once integrations are confirmed."
+      "modelsHint": "Model support shown here is placeholder and will be adjusted once integrations are confirmed.",
+      "pill": {
+        "text": "Jimeng 2.0 is now available",
+        "cta": "Learn more →",
+        "href": "#showcase"
+      }
     },
     "landing": {
       "trust": {

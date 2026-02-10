@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
@@ -45,6 +46,20 @@ export default function HeroSection({
       </div>
 
       <div className="mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center sm:pb-24 sm:pt-16">
+        {/* Center pill announcement (not dismissible) */}
+        <LocaleLink href={t('pill.href')}>
+          <Badge
+            variant="outline"
+            className={cn(
+              'mb-6 border-white/20 bg-white/5 px-4 py-1.5 text-white/85 backdrop-blur-md',
+              'hover:bg-white/10'
+            )}
+          >
+            <span className="mr-2">{t('pill.text')}</span>
+            <span className="text-white/70">{t('pill.cta')}</span>
+          </Badge>
+        </LocaleLink>
+
         <h1 className="text-balance font-bricolage-grotesque text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
           {t('title')}
         </h1>
