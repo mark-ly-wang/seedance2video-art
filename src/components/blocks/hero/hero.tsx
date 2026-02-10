@@ -34,6 +34,7 @@ export default function HeroSection({
           loop
           playsInline
           preload="auto"
+          poster="/media/hero-poster.jpg"
         >
           <source src="/media/hero-bg.mp4" type="video/mp4" />
         </video>
