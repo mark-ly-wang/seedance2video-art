@@ -46,6 +46,7 @@ export function Navbar({ scroll }: NavBarProps) {
   const scrolled = useScroll(50);
   const menuLinks = useNavbarLinks();
   const localePathname = useLocalePathname();
+  const isHome = localePathname === '/';
   const [mounted, setMounted] = useState(false);
   const { data: session, isPending } = authClient.useSession();
   const currentUser = session?.user;
@@ -55,15 +56,22 @@ export function Navbar({ scroll }: NavBarProps) {
     setMounted(true);
   }, []);
 
+  const isHeroGlass = Boolean(scroll && isHome);
+
   return (
     <section
       className={cn(
-        'sticky inset-x-0 top-0 z-40 py-4 transition-all duration-300',
-        scroll
+        'inset-x-0 top-0 py-4 transition-all duration-300',
+        isHeroGlass ? 'fixed z-50' : 'sticky z-40',
+        isHeroGlass
           ? scrolled
-            ? 'bg-muted/50 backdrop-blur-md border-b supports-backdrop-filter:bg-muted/50'
-            : 'bg-transparent'
-          : 'border-b bg-muted/50'
+            ? 'bg-black/10 backdrop-blur-xl backdrop-saturate-150 border-b border-white/10'
+            : 'bg-black/5 backdrop-blur-xl backdrop-saturate-150'
+          : scroll
+            ? scrolled
+              ? 'bg-muted/50 backdrop-blur-md border-b supports-backdrop-filter:bg-muted/50'
+              : 'bg-transparent'
+            : 'border-b bg-muted/50'
       )}
     >
       <Container className="px-4">
