@@ -751,6 +751,96 @@
       "previewBadge": "Preview",
       "previewHint": "We’ll showcase real generations and case studies here."
     },
+    "landing": {
+      "trust": {
+        "title": "Built for e-commerce ads and client delivery",
+        "tags": {
+          "tag-1": "E-commerce ads",
+          "tag-2": "Script-to-ad",
+          "tag-3": "Brand films",
+          "tag-4": "Education"
+        }
+      },
+      "pain": {
+        "title": "The biggest problem isn’t quality — it’s control.",
+        "subtitle": "Most AI video feels like gacha: weak storytelling, drifting characters/scenes, and expensive rework — hard to use reliably for business.",
+        "items": {
+          "item-1": {
+            "title": "Gacha costs",
+            "desc": "You retry the same prompt again and again; randomness eats your time and budget."
+          },
+          "item-2": {
+            "title": "No director’s rhythm",
+            "desc": "Pacing is messy; the message doesn’t land; it feels like stitched fragments."
+          },
+          "item-3": {
+            "title": "Character drift",
+            "desc": "Faces/wardrobe/vibe change across shots, causing repeated rework."
+          },
+          "item-4": {
+            "title": "Scene drift",
+            "desc": "Lighting/color/texture shifts; it doesn’t look like one cohesive ad."
+          }
+        }
+      },
+      "solution": {
+        "title": "Turn gacha generation into controllable iteration.",
+        "subtitle": "We don’t promise 100% perfect consistency. We reduce drift with multi-shot storytelling and consistency mechanisms — and cut rework with partial re-generation.",
+        "items": {
+          "item-1": {
+            "title": "More stable multi-shot storytelling",
+            "desc": "From fragments to a cohesive piece: clearer structure and rhythm."
+          },
+          "item-2": {
+            "title": "Stronger character & scene consistency",
+            "desc": "Keep subject and style more coherent across shots; less “reborn every shot”."
+          },
+          "item-3": {
+            "title": "Partial re-generation",
+            "desc": "Re-generate only the parts you dislike — no need to start over."
+          }
+        },
+        "visual": {
+          "title": "Example: same script, multi-shot output",
+          "shotLabel": "Shot {index}",
+          "action": "Re-do"
+        }
+      },
+      "how": {
+        "title": "Three steps to a deliverable video",
+        "stepLabel": "Step {index}",
+        "steps": {
+          "step-1": {
+            "title": "Input",
+            "desc": "A prompt/script, or upload a first frame."
+          },
+          "step-2": {
+            "title": "Generate",
+            "desc": "Get a multi-shot video; re-do parts you don’t like."
+          },
+          "step-3": {
+            "title": "Export",
+            "desc": "Use it for ad creatives or client delivery."
+          }
+        }
+      },
+      "showcase": {
+        "title": "See results, not parameters",
+        "subtitle": "Generate multiple versions from the same script to test and iterate faster.",
+        "cardHint": "Supports partial re-generation and version comparison",
+        "cta": "Start generating",
+        "cards": {
+          "card-1": { "title": "New arrival", "meta": "10 shots · 15s" },
+          "card-2": { "title": "Promotion", "meta": "12 shots · 30s" },
+          "card-3": { "title": "Script-to-ad", "meta": "8 shots · 15s" }
+        }
+      },
+      "final": {
+        "title": "Start now — generate a deliverable video",
+        "subtitle": "Built for commercial use: more stable multi-shot storytelling and stronger consistency with less rework.",
+        "cta": "Start generating"
+      }
+    },
     "logocloud": {
       "title": "Your favorite companies are our partners"
     },
