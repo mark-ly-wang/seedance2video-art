@@ -780,6 +780,18 @@
           "tag-4": "Education"
         }
       },
+      "toolkit": {
+        "title": "AI Toolkit for production-ready delivery",
+        "items": {
+          "item-1": "Script-to-video",
+          "item-2": "Image-to-video",
+          "item-3": "First-frame lock",
+          "item-4": "Character consistency",
+          "item-5": "Scene consistency",
+          "item-6": "Partial re-generation",
+          "item-7": "Export presets"
+        }
+      },
       "pain": {
         "title": "The biggest problem isn’t quality — it’s control.",
         "subtitle": "Most AI video still feels like rolling the dice: weak storytelling, drifting characters/scenes, and expensive rework — hard to use reliably for business.",

@@ -1,5 +1,6 @@
 import FaqSection from '@/components/blocks/faqs/faqs';
 import HeroSection from '@/components/blocks/hero/hero';
+import ToolkitBelt from '@/components/blocks/landing/toolkit-belt';
 import CrispChat from '@/components/layout/crisp-chat';
 import { Button } from '@/components/ui/button';
 import { LocaleLink } from '@/i18n/navigation';
@@ -41,11 +42,14 @@ export default async function HomePage(props: HomePageProps) {
 
   const primaryHref = session?.user ? Routes.Dashboard : Routes.Login;
 
-  const trustTags = [
-    t('trust.tags.tag-1'),
-    t('trust.tags.tag-2'),
-    t('trust.tags.tag-3'),
-    t('trust.tags.tag-4'),
+  const toolkitItems = [
+    t('toolkit.items.item-1'),
+    t('toolkit.items.item-2'),
+    t('toolkit.items.item-3'),
+    t('toolkit.items.item-4'),
+    t('toolkit.items.item-5'),
+    t('toolkit.items.item-6'),
+    t('toolkit.items.item-7'),
   ];
 
   const painItems = [
@@ -117,24 +121,7 @@ export default async function HomePage(props: HomePageProps) {
       {/* Hero frozen by request */}
       <HeroSection primaryHref={primaryHref} secondaryHref="#showcase" />
 
-      {/* Trust strip */}
-      <section className="px-6 py-12 sm:py-14">
-        <div className="mx-auto max-w-7xl rounded-3xl border border-white/12 bg-gradient-to-b from-white/[0.07] to-white/[0.02] px-6 py-8 sm:px-10 sm:py-10">
-          <p className="text-center text-sm font-medium tracking-wide text-foreground/75">
-            {t('trust.title')}
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-            {trustTags.map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex min-h-10 items-center rounded-full border border-white/15 bg-white/[0.03] px-4 py-1 text-sm text-foreground/90"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ToolkitBelt title={t('toolkit.title')} items={toolkitItems} />
 
       {/* Pain points */}
       <section id="features" className="px-6 py-20 sm:py-24">
