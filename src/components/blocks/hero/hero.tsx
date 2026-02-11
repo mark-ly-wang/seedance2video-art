@@ -59,13 +59,13 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pb-14 pt-0 text-center sm:min-h-[100svh] sm:justify-center sm:pb-24 sm:pt-16">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pb-14 pt-0 text-center sm:min-h-[100svh] sm:justify-center sm:pb-20 sm:pt-24">
         {/* Center pill announcement (not dismissible) */}
         <LocaleLink href={t('pill.href')} className="hidden sm:inline-flex">
           <Badge
             variant="outline"
             className={cn(
-              'mb-6 border-white/20 bg-white/10 px-4 py-1.5 text-white/90 backdrop-blur-md',
+              'mb-7 border-white/20 bg-white/10 px-4 py-1.5 text-white/90 backdrop-blur-md sm:mb-8 sm:px-5 sm:py-2',
               'hover:bg-white/15'
             )}
           >
@@ -78,12 +78,16 @@ export default function HeroSection({
           {t('title')}
         </h1>
 
-        <p className="mt-5 max-w-3xl text-balance text-lg text-white/85 drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)]">
+        <p className="mt-6 max-w-4xl text-balance text-base text-white/85 drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)] sm:text-xl">
           {t('description')}
         </p>
 
-        <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button asChild size="lg" className="rounded-full px-8">
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row">
+          <Button
+            asChild
+            size="lg"
+            className="h-12 rounded-full px-9 text-base font-semibold shadow-[0_10px_35px_rgba(0,0,0,0.35)]"
+          >
             <LocaleLink href={primaryHref}>{t('primary')}</LocaleLink>
           </Button>
 
@@ -92,7 +96,7 @@ export default function HeroSection({
             size="lg"
             variant="outline"
             className={cn(
-              'rounded-full px-8',
+              'h-12 rounded-full px-9 text-base',
               'border-white/25 bg-white/5 text-white hover:bg-white/10'
             )}
           >
@@ -104,15 +108,17 @@ export default function HeroSection({
         </div>
 
         {/* Model strip */}
-        <div className="mt-12 w-full max-w-5xl">
-          <div className="rounded-full border border-white/15 bg-white/10 px-5 py-3 backdrop-blur-md">
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/85">
-              {modelList.map((name) => (
-                <span key={name} className="inline-flex items-center gap-2">
-                  <span className="size-1.5 rounded-full bg-white/70" />
-                  <span className="font-medium">{name}</span>
-                </span>
-              ))}
+        <div className="mt-14 w-full max-w-[46rem] sm:mt-16">
+          <div className="rounded-full bg-gradient-to-b from-white/45 via-white/22 to-white/8 p-[1.5px] shadow-[0_14px_34px_rgba(0,0,0,0.45)]">
+            <div className="rounded-full border border-white/15 bg-transparent px-5 py-3">
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/90">
+                {modelList.map((name) => (
+                  <span key={name} className="inline-flex items-center gap-2">
+                    <span className="size-1.5 rounded-full bg-white/75" />
+                    <span className="font-medium">{name}</span>
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 

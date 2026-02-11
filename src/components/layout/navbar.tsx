@@ -59,7 +59,7 @@ export function Navbar({ scroll }: NavBarProps) {
   const isOverlay = Boolean(scroll && isHome);
 
   const glassDropdownContentClassName = cn(
-    'w-72 p-0',
+    'w-[22rem] max-w-[calc(100vw-3rem)] p-0',
     'group-data-[viewport=false]/navigation-menu:bg-background/70',
     'group-data-[viewport=false]/navigation-menu:text-foreground',
     'group-data-[viewport=false]/navigation-menu:backdrop-blur-2xl',
@@ -118,7 +118,7 @@ export function Navbar({ scroll }: NavBarProps) {
                       <NavigationMenuContent
                         className={glassDropdownContentClassName}
                       >
-                        <ul className="space-y-1 p-2">
+                        <ul className="space-y-1.5 p-2.5">
                           {item.items?.map((subItem, subIndex) => {
                             const isSubItemActive =
                               subItem.href &&
@@ -137,15 +137,17 @@ export function Navbar({ scroll }: NavBarProps) {
                                         : undefined
                                     }
                                     className={cn(
-                                      'flex items-center justify-between gap-3 rounded-2xl px-4 py-3',
-                                      'text-sm font-medium text-foreground/80 transition-colors',
+                                      'flex items-center justify-between gap-3 rounded-2xl px-4 py-3.5',
+                                      'whitespace-nowrap text-sm font-medium text-foreground/85 transition-colors',
                                       'hover:bg-foreground/10 hover:text-foreground',
                                       'focus:bg-foreground/10 focus:text-foreground',
                                       isSubItemActive &&
                                         'bg-foreground/10 text-foreground'
                                     )}
                                   >
-                                    <span>{subItem.title}</span>
+                                    <span className="whitespace-nowrap">
+                                      {subItem.title}
+                                    </span>
                                     {subItem.external && (
                                       <ArrowUpRightIcon className="size-4 shrink-0 opacity-70" />
                                     )}
