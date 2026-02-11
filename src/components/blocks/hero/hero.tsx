@@ -6,6 +6,7 @@ import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export type HeroSectionProps = {
   primaryHref: string;
@@ -20,25 +21,49 @@ export default function HeroSection({
 
   const models = t.raw('models') as unknown;
   const modelList = Array.isArray(models) ? (models as string[]) : [];
+  const [videoReady, setVideoReady] = useState(false);
 
   return (
     <section className="relative overflow-hidden bg-black sm:min-h-[100svh]">
       {/* Hero background video (no overlay). Keep inside the hero stacking context. */}
-      <div className="relative z-0 aspect-video w-full overflow-hidden bg-black sm:absolute sm:inset-0 sm:aspect-auto">
+      <div
+        className="relative z-0 aspect-video w-full overflow-hidden bg-black bg-cover bg-center sm:absolute sm:inset-0 sm:aspect-auto"
+        style={{ backgroundImage: "url('/media/hero-poster.jpg')" }}
+      >
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-black/70 to-transparent sm:hidden"
         />
         <video
           aria-hidden
-          className="pointer-events-none h-full w-full object-cover"
+          className={cn(
+            'pointer-events-none h-full w-full object-cover transition-opacity duration-700',
+            videoReady ? 'opacity-100' : 'opacity-0'
+          )}
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           poster="/media/hero-poster.jpg"
+          onLoadedData={() => setVideoReady(true)}
+          onCanPlay={() => setVideoReady(true)}
         >
+          <source
+            src="/media/hero-bg-mobile.webm"
+            type="video/webm"
+            media="(max-width: 767px)"
+          />
+          <source
+            src="/media/hero-bg-mobile.mp4"
+            type="video/mp4"
+            media="(max-width: 767px)"
+          />
+          <source
+            src="/media/hero-bg.webm"
+            type="video/webm"
+            media="(min-width: 768px)"
+          />
           <source src="/media/hero-bg.mp4" type="video/mp4" />
         </video>
 
