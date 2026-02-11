@@ -18,7 +18,7 @@ export default function ToolkitShowcase({
   imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="overflow-x-clip px-6 pt-6 pb-10 sm:pt-8 sm:pb-12 lg:min-h-[100svh] lg:pt-0 lg:pb-2">
+    <section className="overflow-x-clip px-6 pt-6 pb-12 sm:pt-8 sm:pb-14 lg:pt-4 lg:pb-16">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-balance font-bricolage-grotesque text-5xl leading-[0.96] tracking-tight sm:text-7xl">
@@ -42,19 +42,17 @@ export default function ToolkitShowcase({
             </div>
           ) : null}
         </div>
+      </div>
 
-        <div className="mx-auto mt-5 flex w-full justify-center lg:mt-3">
-          <div className="relative left-1/2 w-full max-w-[96rem] -translate-x-1/2 lg:w-[150%] lg:max-w-none">
-            <Image
-              src="/media/toolkit-showcase-grid-20260211.webp"
-              alt={imageAlt}
-              width={3840}
-              height={1732}
-              className="h-auto w-full object-contain"
-              priority={false}
-            />
-          </div>
-        </div>
+      <div className="mx-auto mt-8 w-full max-w-[1600px] xl:mt-10 xl:w-[clamp(77rem,88vw,100rem)] xl:max-w-none">
+        <Image
+          src="/media/toolkit-showcase-grid-20260211.webp"
+          alt={imageAlt}
+          width={3840}
+          height={1732}
+          className="h-auto w-full object-contain"
+          priority={false}
+        />
       </div>
     </section>
   );
