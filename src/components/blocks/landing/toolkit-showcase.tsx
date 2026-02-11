@@ -18,7 +18,7 @@ export default function ToolkitShowcase({
   imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="overflow-x-clip px-6 pt-6 pb-12 sm:pt-8 sm:pb-14 lg:pt-4 lg:pb-16">
+    <section className="overflow-x-clip px-6 pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-6 lg:pb-16">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-balance font-bricolage-grotesque text-5xl leading-[0.96] tracking-tight sm:text-7xl">
