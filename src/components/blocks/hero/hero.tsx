@@ -24,12 +24,14 @@ export default function HeroSection({
   return (
     <section className="relative overflow-hidden bg-black sm:min-h-[100svh]">
       {/* Hero background video (no overlay). Keep inside the hero stacking context. */}
-      <div
-        aria-hidden
-        className="pointer-events-none relative z-0 aspect-video w-full overflow-hidden bg-black sm:absolute sm:inset-0 sm:aspect-auto"
-      >
+      <div className="relative z-0 aspect-video w-full overflow-hidden bg-black sm:absolute sm:inset-0 sm:aspect-auto">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-black/70 to-transparent sm:hidden"
+        />
         <video
-          className="h-full w-full object-cover"
+          aria-hidden
+          className="pointer-events-none h-full w-full object-cover"
           autoPlay
           muted
           loop
@@ -39,11 +41,27 @@ export default function HeroSection({
         >
           <source src="/media/hero-bg.mp4" type="video/mp4" />
         </video>
+
+        {/* Mobile pill pinned to the video */}
+        <div className="absolute inset-x-0 bottom-5 z-20 flex justify-center px-6 sm:hidden">
+          <LocaleLink href={t('pill.href')}>
+            <Badge
+              variant="outline"
+              className={cn(
+                'border-white/20 bg-white/10 px-4 py-1.5 text-white/90 backdrop-blur-md',
+                'hover:bg-white/15'
+              )}
+            >
+              <span className="mr-2">{t('pill.text')}</span>
+              <span className="text-white/75">{t('pill.cta')}</span>
+            </Badge>
+          </LocaleLink>
+        </div>
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pb-14 pt-10 text-center sm:min-h-[100svh] sm:justify-center sm:pb-24 sm:pt-16">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 pb-14 pt-0 text-center sm:min-h-[100svh] sm:justify-center sm:pb-24 sm:pt-16">
         {/* Center pill announcement (not dismissible) */}
-        <LocaleLink href={t('pill.href')}>
+        <LocaleLink href={t('pill.href')} className="hidden sm:inline-flex">
           <Badge
             variant="outline"
             className={cn(
@@ -56,7 +74,7 @@ export default function HeroSection({
           </Badge>
         </LocaleLink>
 
-        <h1 className="text-balance font-bricolage-grotesque text-4xl leading-[1.05] tracking-tight text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
+        <h1 className="text-balance font-bricolage-grotesque -mt-1.5 text-4xl leading-[1.05] tracking-tight text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.55)] sm:mt-0 sm:text-6xl lg:text-7xl">
           {t('title')}
         </h1>
 
