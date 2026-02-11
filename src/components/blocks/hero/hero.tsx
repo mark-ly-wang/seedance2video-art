@@ -119,21 +119,27 @@ export default function HeroSection({
           </Button>
         </div>
 
-        <div className="mt-14 w-full max-w-[46rem]">
-          <div className="rounded-full bg-gradient-to-b from-white/45 via-white/22 to-white/8 p-[1.5px] shadow-[0_14px_34px_rgba(0,0,0,0.45)]">
-            <div className="rounded-full border border-white/15 bg-transparent px-5 py-3">
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/90">
+        <div className="mt-12 w-full max-w-[56rem]">
+          <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(162,186,226,0.32)_22%,rgba(52,68,98,0.2)_100%)] p-[1.5px] shadow-[0_18px_34px_rgba(0,6,18,0.5),0_0_0_1px_rgba(255,255,255,0.08)]">
+            <div className="relative overflow-hidden rounded-full border border-white/18 bg-[radial-gradient(125%_145%_at_50%_0%,rgba(82,112,170,0.4)_0%,rgba(12,20,40,0.95)_48%,rgba(6,12,26,0.98)_100%)] px-5 py-3 backdrop-blur-xl">
+              <div className="pointer-events-none absolute inset-x-5 top-[1px] h-[42%] rounded-full bg-gradient-to-b from-white/35 via-white/12 to-transparent" />
+              <div className="relative flex items-center justify-start gap-5 overflow-x-auto text-sm text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {modelList.map((name) => (
-                  <span key={name} className="inline-flex items-center gap-2">
-                    <span className="size-1.5 rounded-full bg-white/75" />
-                    <span className="font-medium">{name}</span>
+                  <span
+                    key={name}
+                    className="inline-flex shrink-0 items-center gap-2"
+                  >
+                    <span className="size-1.5 rounded-full bg-white/85 shadow-[0_0_10px_rgba(255,255,255,0.45)]" />
+                    <span className="font-medium tracking-[0.01em]">
+                      {name}
+                    </span>
                   </span>
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="mt-4 text-xs text-white/70 drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)]">
+          <div className="mt-3 text-xs text-white/70 drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)]">
             {t('modelsHint')}
           </div>
         </div>
@@ -195,15 +201,21 @@ export default function HeroSection({
           </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-[7svh] px-6">
-          <div className="mx-auto w-full max-w-[46rem]">
-            <div className="rounded-full bg-gradient-to-b from-white/45 via-white/22 to-white/8 p-[1.5px] shadow-[0_14px_34px_rgba(0,0,0,0.45)]">
-              <div className="rounded-full border border-white/15 bg-transparent px-6 py-3.5">
-                <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-base text-white/90">
+        <div className="absolute inset-x-0 bottom-[6svh] px-6">
+          <div className="mx-auto w-full max-w-[58rem]">
+            <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(173,198,236,0.34)_20%,rgba(58,74,104,0.2)_100%)] p-[1.7px] shadow-[0_22px_46px_rgba(0,6,20,0.55),0_0_0_1px_rgba(255,255,255,0.08)]">
+              <div className="relative overflow-hidden rounded-full border border-white/18 bg-[radial-gradient(128%_150%_at_50%_0%,rgba(76,105,162,0.42)_0%,rgba(11,18,38,0.96)_48%,rgba(6,11,24,0.99)_100%)] px-7 py-3.5 backdrop-blur-xl">
+                <div className="pointer-events-none absolute inset-x-6 top-[1px] h-[38%] rounded-full bg-gradient-to-b from-white/34 via-white/12 to-transparent" />
+                <div className="relative flex items-center justify-center gap-7 overflow-x-auto text-base text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   {modelList.map((name) => (
-                    <span key={name} className="inline-flex items-center gap-2">
-                      <span className="size-1.5 rounded-full bg-white/75" />
-                      <span className="font-medium">{name}</span>
+                    <span
+                      key={name}
+                      className="inline-flex shrink-0 items-center gap-2"
+                    >
+                      <span className="size-1.5 rounded-full bg-white/85 shadow-[0_0_10px_rgba(255,255,255,0.45)]" />
+                      <span className="font-medium tracking-[0.01em]">
+                        {name}
+                      </span>
                     </span>
                   ))}
                 </div>

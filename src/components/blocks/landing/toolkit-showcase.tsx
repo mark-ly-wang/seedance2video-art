@@ -18,21 +18,21 @@ export default function ToolkitShowcase({
   imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="px-6 py-14 sm:py-18">
-      <div className="mx-auto max-w-7xl">
+    <section className="px-6 py-14 sm:py-18 lg:flex lg:min-h-[100svh] lg:items-center lg:py-6">
+      <div className="mx-auto w-full max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-balance font-bricolage-grotesque text-5xl leading-[0.96] tracking-tight sm:text-7xl">
             {title}
           </h2>
 
           {subtitle ? (
-            <p className="mt-4 text-balance text-lg text-foreground/82 sm:text-[1.85rem] sm:leading-tight">
+            <p className="mt-4 text-balance text-lg text-foreground/82 sm:text-[1.55rem] sm:leading-tight">
               {subtitle}
             </p>
           ) : null}
 
           {ctaLabel && ctaHref ? (
-            <div className="mt-7 flex justify-center">
+            <div className="mt-6 flex justify-center">
               <Button
                 asChild
                 size="lg"
@@ -44,13 +44,13 @@ export default function ToolkitShowcase({
           ) : null}
         </div>
 
-        <div className="mx-auto mt-9 w-full max-w-[96rem]">
+        <div className="mx-auto mt-8 flex w-full justify-center lg:mt-6">
           <Image
             src="/media/toolkit-showcase-grid-20260211.webp"
             alt={imageAlt}
             width={3840}
             height={1732}
-            className="h-auto w-full"
+            className="h-auto w-full max-w-[96rem] object-contain lg:max-h-[56svh] lg:w-auto lg:max-w-full"
             priority={false}
           />
         </div>
