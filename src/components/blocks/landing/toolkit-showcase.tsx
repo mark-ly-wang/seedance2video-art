@@ -18,7 +18,7 @@ export default function ToolkitShowcase({
   imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="overflow-x-clip px-6 pt-14 pb-12 sm:pt-14 sm:pb-14 lg:pt-12 lg:pb-16">
+    <section className="overflow-x-clip px-6 pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-28 lg:pb-16">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-balance font-bricolage-grotesque text-5xl leading-[0.96] tracking-tight sm:text-7xl">
@@ -44,7 +44,7 @@ export default function ToolkitShowcase({
         </div>
       </div>
 
-      <div className="mx-auto mt-10 w-full max-w-[1600px] xl:mt-12 xl:w-[clamp(77rem,88vw,100rem)] xl:max-w-none">
+      <div className="mx-auto mt-6 w-full max-w-[1600px] xl:mt-8 xl:w-[clamp(77rem,88vw,100rem)] xl:max-w-none">
         <Image
           src="/media/toolkit-showcase-grid-20260211.webp"
           alt={imageAlt}
