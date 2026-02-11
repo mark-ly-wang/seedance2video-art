@@ -20,7 +20,7 @@ export default function ToolkitShowcase({
           <div className="mx-auto w-full max-w-[72rem] rounded-[28px] bg-gradient-to-b from-white/40 via-white/18 to-white/7 p-[1.5px] shadow-[0_16px_38px_rgba(0,0,0,0.5)]">
             <div className="overflow-hidden rounded-[26px] border border-white/15 bg-black/35">
               <Image
-                src="/media/toolkit-showcase-ref.webp"
+                src="/media/toolkit-showcase-grid-20260211.webp"
                 alt="AI Toolkit showcase"
                 width={1280}
                 height={659}
