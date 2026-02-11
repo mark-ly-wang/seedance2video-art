@@ -18,7 +18,7 @@ export default function ToolkitShowcase({
   imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="overflow-x-clip px-6 pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-6 lg:pb-16">
+    <section className="overflow-x-clip px-6 pt-14 pb-12 sm:pt-14 sm:pb-14 lg:pt-12 lg:pb-16">
       <div className="mx-auto w-full max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-balance font-bricolage-grotesque text-5xl leading-[0.96] tracking-tight sm:text-7xl">
@@ -26,13 +26,13 @@ export default function ToolkitShowcase({
           </h2>
 
           {subtitle ? (
-            <p className="mt-1.5 text-balance text-base text-foreground/82 sm:text-[1.12rem] sm:leading-[1.3]">
+            <p className="mt-3 text-balance text-base text-foreground/82 sm:text-[1.12rem] sm:leading-[1.3]">
               {subtitle}
             </p>
           ) : null}
 
           {ctaLabel && ctaHref ? (
-            <div className="mt-4 flex justify-center">
+            <div className="mt-5 flex justify-center">
               <Button
                 asChild
                 className="h-[3.05rem] rounded-full border border-[#f4e07a]/70 bg-[linear-gradient(180deg,#fff0ad_0%,#ffe075_40%,#e2bc3a_100%)] px-11 text-[0.98rem] font-semibold text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.7),inset_0_-1px_0_rgba(108,82,20,0.28),0_11px_22px_rgba(0,0,0,0.34)] hover:brightness-105"
@@ -44,7 +44,7 @@ export default function ToolkitShowcase({
         </div>
       </div>
 
-      <div className="mx-auto mt-8 w-full max-w-[1600px] xl:mt-10 xl:w-[clamp(77rem,88vw,100rem)] xl:max-w-none">
+      <div className="mx-auto mt-10 w-full max-w-[1600px] xl:mt-12 xl:w-[clamp(77rem,88vw,100rem)] xl:max-w-none">
         <Image
           src="/media/toolkit-showcase-grid-20260211.webp"
           alt={imageAlt}
