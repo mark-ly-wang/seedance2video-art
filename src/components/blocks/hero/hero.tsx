@@ -119,10 +119,11 @@ export default function HeroSection({
           </Button>
         </div>
 
-        <div className="mt-12 w-full max-w-[56rem]">
-          <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(162,186,226,0.32)_22%,rgba(52,68,98,0.2)_100%)] p-[1.5px] shadow-[0_18px_34px_rgba(0,6,18,0.5),0_0_0_1px_rgba(255,255,255,0.08)]">
-            <div className="relative overflow-hidden rounded-full border border-white/28 bg-transparent px-5 py-3 backdrop-blur-[14px]">
-              <div className="relative flex items-center justify-start gap-5 overflow-x-auto text-sm text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mt-12 w-full max-w-[27rem]">
+          <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.9)_0%,rgba(171,194,233,0.32)_24%,rgba(54,72,104,0.22)_100%)] p-[1.5px] shadow-[0_18px_34px_rgba(0,6,18,0.5),0_0_0_1px_rgba(255,255,255,0.08)]">
+            <div className="relative overflow-hidden rounded-full border border-white/26 bg-transparent px-5 py-3 backdrop-blur-[14px] backdrop-brightness-50 backdrop-saturate-150">
+              <div className="pointer-events-none absolute inset-x-5 top-[1px] h-[38%] rounded-full bg-gradient-to-b from-white/28 via-white/8 to-transparent" />
+              <div className="relative flex items-center justify-start gap-5 overflow-x-auto whitespace-nowrap text-sm text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {modelList.map((name) => (
                   <span
                     key={name}
@@ -203,8 +204,9 @@ export default function HeroSection({
         <div className="absolute inset-x-0 bottom-[6svh] px-6">
           <div className="mx-auto w-full max-w-[58rem]">
             <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(173,198,236,0.34)_20%,rgba(58,74,104,0.2)_100%)] p-[1.7px] shadow-[0_22px_46px_rgba(0,6,20,0.55),0_0_0_1px_rgba(255,255,255,0.08)]">
-              <div className="relative overflow-hidden rounded-full border border-white/28 bg-transparent px-7 py-3.5 backdrop-blur-[16px]">
-                <div className="relative flex items-center justify-center gap-7 overflow-x-auto text-base text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="relative overflow-hidden rounded-full border border-white/26 bg-transparent px-7 py-3.5 backdrop-blur-[16px] backdrop-brightness-50 backdrop-saturate-150">
+                <div className="pointer-events-none absolute inset-x-6 top-[1px] h-[36%] rounded-full bg-gradient-to-b from-white/28 via-white/8 to-transparent" />
+                <div className="relative flex items-center justify-center gap-7 overflow-x-auto whitespace-nowrap text-base text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   {modelList.map((name) => (
                     <span
                       key={name}
