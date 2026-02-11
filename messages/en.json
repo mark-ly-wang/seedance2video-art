@@ -753,7 +753,6 @@
       "title": "Commercial-ready AI video in 1 click",
       "description": "More stable multi-shot storytelling with better character and scene consistency.",
       "primary": "Start generating",
-      "secondary": "See examples",
       "models": [
         "Sora",
         "Veo",

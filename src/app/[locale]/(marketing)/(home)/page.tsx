@@ -114,7 +114,7 @@ export default async function HomePage(props: HomePageProps) {
   return (
     <div className="flex flex-col bg-background">
       {/* Hero frozen by request */}
-      <HeroSection primaryHref={primaryHref} secondaryHref="#showcase" />
+      <HeroSection primaryHref={primaryHref} />
 
       <ToolkitShowcase
         title={toolkitTitle}

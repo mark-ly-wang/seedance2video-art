@@ -4,19 +4,14 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { LocaleLink } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 export type HeroSectionProps = {
   primaryHref: string;
-  secondaryHref?: string;
 };
 
-export default function HeroSection({
-  primaryHref,
-  secondaryHref = '/#showcase',
-}: HeroSectionProps) {
+export default function HeroSection({ primaryHref }: HeroSectionProps) {
   const t = useTranslations('HomePage.hero');
 
   const models = t.raw('models') as unknown;
@@ -98,30 +93,15 @@ export default function HeroSection({
           <Button
             asChild
             size="lg"
-            className="h-12 rounded-full px-9 text-base font-semibold shadow-[0_10px_35px_rgba(0,0,0,0.35)]"
+            className="h-12 rounded-full border border-yellow-300/30 bg-[linear-gradient(180deg,#f5d96e_0%,#c9a830_100%)] px-9 text-base font-semibold text-[#1a1400] shadow-[0_10px_35px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.35)] hover:brightness-105"
           >
             <LocaleLink href={primaryHref}>{t('primary')}</LocaleLink>
-          </Button>
-
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className={cn(
-              'h-12 rounded-full px-9 text-base',
-              'border-white/25 bg-white/5 text-white hover:bg-white/10'
-            )}
-          >
-            <LocaleLink href={secondaryHref}>
-              <span className="mr-2">{t('secondary')}</span>
-              <ArrowRight className="size-4" />
-            </LocaleLink>
           </Button>
         </div>
 
         <div className="mt-12 w-full max-w-[27rem]">
-          <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.9)_0%,rgba(171,194,233,0.32)_24%,rgba(54,72,104,0.22)_100%)] p-[1.5px] shadow-[0_18px_34px_rgba(0,6,18,0.5),0_0_0_1px_rgba(255,255,255,0.08)]">
-            <div className="relative overflow-hidden rounded-full border border-white/26 bg-transparent px-5 py-3 backdrop-blur-[14px]">
+          <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(160,190,255,0.45)_0%,rgba(60,80,120,0.12)_30%,transparent_100%)] p-[1px] shadow-[0_18px_34px_rgba(0,6,18,0.5),0_0_0_1px_rgba(140,180,255,0.18)]">
+            <div className="relative overflow-hidden rounded-full border border-white/[0.08] bg-[rgba(10,16,36,0.72)] px-5 py-3 backdrop-blur-[14px]">
               <div className="relative flex items-center justify-start gap-5 overflow-x-auto whitespace-nowrap text-sm text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {modelList.map((name) => (
                   <span
@@ -178,32 +158,17 @@ export default function HeroSection({
             <Button
               asChild
               size="lg"
-              className="h-12 rounded-full px-9 text-base font-semibold shadow-[0_10px_35px_rgba(0,0,0,0.35)]"
+              className="h-12 rounded-full border border-yellow-300/30 bg-[linear-gradient(180deg,#f5d96e_0%,#c9a830_100%)] px-9 text-base font-semibold text-[#1a1400] shadow-[0_10px_35px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.35)] hover:brightness-105"
             >
               <LocaleLink href={primaryHref}>{t('primary')}</LocaleLink>
-            </Button>
-
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className={cn(
-                'h-12 rounded-full px-9 text-base',
-                'border-white/25 bg-white/5 text-white hover:bg-white/10'
-              )}
-            >
-              <LocaleLink href={secondaryHref}>
-                <span className="mr-2">{t('secondary')}</span>
-                <ArrowRight className="size-4" />
-              </LocaleLink>
             </Button>
           </div>
         </div>
 
         <div className="absolute inset-x-0 bottom-[6svh] px-6">
           <div className="mx-auto w-full max-w-[58rem]">
-            <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(173,198,236,0.34)_20%,rgba(58,74,104,0.2)_100%)] p-[1.7px] shadow-[0_22px_46px_rgba(0,6,20,0.55),0_0_0_1px_rgba(255,255,255,0.08)]">
-              <div className="relative overflow-hidden rounded-full border border-white/26 bg-transparent px-7 py-3.5 backdrop-blur-[16px]">
+            <div className="relative rounded-full bg-[linear-gradient(180deg,rgba(160,190,255,0.45)_0%,rgba(60,80,120,0.12)_30%,transparent_100%)] p-[1px] shadow-[0_22px_46px_rgba(0,6,20,0.55),0_0_0_1px_rgba(140,180,255,0.18)]">
+              <div className="relative overflow-hidden rounded-full border border-white/[0.08] bg-[rgba(10,16,36,0.72)] px-7 py-3.5 backdrop-blur-[16px]">
                 <div className="relative flex items-center justify-center gap-7 overflow-x-auto whitespace-nowrap text-base text-white/92 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   {modelList.map((name) => (
                     <span
