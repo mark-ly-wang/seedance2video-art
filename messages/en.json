@@ -781,16 +781,8 @@
         }
       },
       "toolkit": {
-        "title": "AI Toolkit for production-ready delivery",
-        "items": {
-          "item-1": "Script-to-video",
-          "item-2": "Image-to-video",
-          "item-3": "First-frame lock",
-          "item-4": "Character consistency",
-          "item-5": "Scene consistency",
-          "item-6": "Partial re-generation",
-          "item-7": "Export presets"
-        }
+        "title": "AI Toolkit showcase",
+        "caption": "Reference visual for toolkit capabilities and workflow."
       },
       "pain": {
         "title": "The biggest problem isn’t quality — it’s control.",

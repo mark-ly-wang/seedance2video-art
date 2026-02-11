@@ -1,6 +1,6 @@
 import FaqSection from '@/components/blocks/faqs/faqs';
 import HeroSection from '@/components/blocks/hero/hero';
-import ToolkitBelt from '@/components/blocks/landing/toolkit-belt';
+import ToolkitShowcase from '@/components/blocks/landing/toolkit-showcase';
 import CrispChat from '@/components/layout/crisp-chat';
 import { Button } from '@/components/ui/button';
 import { LocaleLink } from '@/i18n/navigation';
@@ -42,15 +42,8 @@ export default async function HomePage(props: HomePageProps) {
 
   const primaryHref = session?.user ? Routes.Dashboard : Routes.Login;
 
-  const toolkitItems = [
-    t('toolkit.items.item-1'),
-    t('toolkit.items.item-2'),
-    t('toolkit.items.item-3'),
-    t('toolkit.items.item-4'),
-    t('toolkit.items.item-5'),
-    t('toolkit.items.item-6'),
-    t('toolkit.items.item-7'),
-  ];
+  const toolkitTitle = t('toolkit.title');
+  const toolkitCaption = t('toolkit.caption');
 
   const painItems = [
     {
@@ -121,7 +114,7 @@ export default async function HomePage(props: HomePageProps) {
       {/* Hero frozen by request */}
       <HeroSection primaryHref={primaryHref} secondaryHref="#showcase" />
 
-      <ToolkitBelt title={t('toolkit.title')} items={toolkitItems} />
+      <ToolkitShowcase title={toolkitTitle} caption={toolkitCaption} />
 
       {/* Pain points */}
       <section id="features" className="px-6 py-20 sm:py-24">
