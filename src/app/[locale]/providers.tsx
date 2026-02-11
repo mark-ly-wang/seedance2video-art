@@ -23,15 +23,14 @@ interface ProvidersProps {
  * - TooltipProvider: Provides the tooltip to the app.
  */
 export function Providers({ children }: ProvidersProps) {
-  const defaultMode = websiteConfig.ui.mode?.defaultMode ?? 'system';
-
   return (
     <PostHogProvider>
       <QueryProvider>
         <ThemeProvider
           attribute="class"
-          defaultTheme={defaultMode}
-          enableSystem={true}
+          defaultTheme="dark"
+          forcedTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <TooltipProvider>{children}</TooltipProvider>
