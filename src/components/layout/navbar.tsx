@@ -62,6 +62,7 @@ export function Navbar({ scroll }: NavBarProps) {
     'w-[22rem] max-w-[calc(100vw-3rem)] p-0',
     'group-data-[viewport=false]/navigation-menu:bg-background/70',
     'group-data-[viewport=false]/navigation-menu:text-foreground',
+    'group-data-[viewport=false]/navigation-menu:left-0',
     'group-data-[viewport=false]/navigation-menu:backdrop-blur-2xl',
     'group-data-[viewport=false]/navigation-menu:backdrop-saturate-150',
     'group-data-[viewport=false]/navigation-menu:border-foreground/10',
@@ -118,7 +119,7 @@ export function Navbar({ scroll }: NavBarProps) {
                       <NavigationMenuContent
                         className={glassDropdownContentClassName}
                       >
-                        <ul className="space-y-1.5 p-2.5">
+                        <ul className="w-full space-y-1.5 p-2.5 text-left">
                           {item.items?.map((subItem, subIndex) => {
                             const isSubItemActive =
                               subItem.href &&
@@ -137,7 +138,7 @@ export function Navbar({ scroll }: NavBarProps) {
                                         : undefined
                                     }
                                     className={cn(
-                                      'flex items-center justify-between gap-3 rounded-2xl px-4 py-3.5',
+                                      'flex w-full items-center gap-3 rounded-2xl px-4 py-3.5 text-left',
                                       'whitespace-nowrap text-sm font-medium text-foreground/85 transition-colors',
                                       'hover:bg-foreground/10 hover:text-foreground',
                                       'focus:bg-foreground/10 focus:text-foreground',
@@ -145,11 +146,11 @@ export function Navbar({ scroll }: NavBarProps) {
                                         'bg-foreground/10 text-foreground'
                                     )}
                                   >
-                                    <span className="whitespace-nowrap">
+                                    <span className="whitespace-nowrap text-left">
                                       {subItem.title}
                                     </span>
                                     {subItem.external && (
-                                      <ArrowUpRightIcon className="size-4 shrink-0 opacity-70" />
+                                      <ArrowUpRightIcon className="ml-auto size-4 shrink-0 opacity-70" />
                                     )}
                                   </LocaleLink>
                                 </NavigationMenuLink>
