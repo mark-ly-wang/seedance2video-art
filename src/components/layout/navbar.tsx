@@ -32,13 +32,13 @@ interface NavBarProps {
   scroll?: boolean;
 }
 
-const customNavigationMenuTriggerStyle = cn(
+const glassNavigationMenuTriggerStyle = cn(
   navigationMenuTriggerStyle(),
-  'relative bg-transparent text-muted-foreground cursor-pointer',
-  'hover:bg-accent hover:text-accent-foreground',
-  'focus:bg-accent focus:text-accent-foreground',
-  'data-active:font-semibold data-active:bg-transparent data-active:text-accent-foreground',
-  'data-[state=open]:bg-transparent data-[state=open]:text-accent-foreground'
+  'relative rounded-full bg-transparent text-foreground/80 cursor-pointer',
+  'hover:bg-foreground/10 hover:text-foreground',
+  'focus:bg-foreground/10 focus:text-foreground',
+  'data-active:font-semibold data-active:bg-transparent data-active:text-foreground',
+  'data-[state=open]:bg-foreground/10 data-[state=open]:text-foreground'
 );
 
 export function Navbar({ scroll }: NavBarProps) {
@@ -56,36 +56,29 @@ export function Navbar({ scroll }: NavBarProps) {
     setMounted(true);
   }, []);
 
-  const isHeroGlass = Boolean(scroll && isHome);
+  const isOverlay = Boolean(scroll && isHome);
 
-  const heroNavItemClassName = isHeroGlass
-    ? cn(
-        'text-white',
-        'hover:bg-white/10 hover:text-white',
-        'focus:bg-white/10 focus:text-white',
-        'data-active:text-white',
-        'data-[state=open]:bg-white/10 data-[state=open]:text-white'
-      )
-    : undefined;
-
-  const heroDropdownContentClassName = isHeroGlass
-    ? 'bg-black/60 text-white/90 backdrop-blur-xl backdrop-saturate-150 border border-white/10 shadow-2xl rounded-3xl p-0 pr-0'
-    : undefined;
+  const glassDropdownContentClassName = cn(
+    'w-72 p-0',
+    'group-data-[viewport=false]/navigation-menu:bg-background/70',
+    'group-data-[viewport=false]/navigation-menu:text-foreground',
+    'group-data-[viewport=false]/navigation-menu:backdrop-blur-2xl',
+    'group-data-[viewport=false]/navigation-menu:backdrop-saturate-150',
+    'group-data-[viewport=false]/navigation-menu:border-foreground/10',
+    'group-data-[viewport=false]/navigation-menu:shadow-2xl',
+    'group-data-[viewport=false]/navigation-menu:rounded-3xl'
+  );
 
   return (
     <section
       className={cn(
         'inset-x-0 top-0 py-4 transition-all duration-300',
-        isHeroGlass ? 'fixed z-50' : 'sticky z-40',
-        isHeroGlass
+        isOverlay ? 'fixed z-50' : 'sticky z-40',
+        scroll
           ? scrolled
-            ? 'bg-black/[0.06] backdrop-blur-lg backdrop-saturate-150 border-b border-white/10'
-            : 'bg-black/[0.03] backdrop-blur-lg backdrop-saturate-150'
-          : scroll
-            ? scrolled
-              ? 'bg-muted/50 backdrop-blur-md border-b supports-backdrop-filter:bg-muted/50'
-              : 'bg-transparent'
-            : 'border-b bg-muted/50'
+            ? 'bg-background/70 backdrop-blur-xl backdrop-saturate-150 border-b border-foreground/10'
+            : 'bg-background/40 backdrop-blur-xl backdrop-saturate-150'
+          : 'border-b bg-background/70 backdrop-blur-xl backdrop-saturate-150'
       )}
     >
       <Container className="px-4">
@@ -95,12 +88,7 @@ export function Navbar({ scroll }: NavBarProps) {
           <div className="flex items-center">
             <LocaleLink href="/" className="flex items-center space-x-2">
               <Logo />
-              <span
-                className={cn(
-                  'text-xl font-semibold',
-                  isHeroGlass && 'text-white'
-                )}
-              >
+              <span className="text-xl font-semibold">
                 {t('Metadata.name')}
               </span>
             </LocaleLink>
@@ -108,7 +96,7 @@ export function Navbar({ scroll }: NavBarProps) {
 
           {/* menu links */}
           <div className="flex-1 flex items-center justify-center space-x-2">
-            <NavigationMenu className="relative" viewport={!isHeroGlass}>
+            <NavigationMenu className="relative" viewport={false}>
               <NavigationMenuList className="flex items-center">
                 {menuLinks?.map((item, index) =>
                   item.items ? (
@@ -123,19 +111,19 @@ export function Navbar({ scroll }: NavBarProps) {
                             ? 'true'
                             : undefined
                         }
-                        className={cn(
-                          customNavigationMenuTriggerStyle,
-                          heroNavItemClassName
-                        )}
+                        className={glassNavigationMenuTriggerStyle}
                       >
                         {item.title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent
-                        className={cn(heroDropdownContentClassName)}
+                        className={glassDropdownContentClassName}
                       >
-                        {isHeroGlass ? (
-                          <ul className="w-64 space-y-1 p-5">
-                            {item.items?.map((subItem, subIndex) => (
+                        <ul className="space-y-1 p-2">
+                          {item.items?.map((subItem, subIndex) => {
+                            const isSubItemActive =
+                              subItem.href &&
+                              localePathname.startsWith(subItem.href);
+                            return (
                               <li key={subIndex}>
                                 <NavigationMenuLink asChild>
                                   <LocaleLink
@@ -149,103 +137,24 @@ export function Navbar({ scroll }: NavBarProps) {
                                         : undefined
                                     }
                                     className={cn(
-                                      'block rounded-2xl px-6 py-3 text-white/80 transition-colors',
-                                      'hover:bg-white/10 hover:text-white'
+                                      'flex items-center justify-between gap-3 rounded-2xl px-4 py-3',
+                                      'text-sm font-medium text-foreground/80 transition-colors',
+                                      'hover:bg-foreground/10 hover:text-foreground',
+                                      'focus:bg-foreground/10 focus:text-foreground',
+                                      isSubItemActive &&
+                                        'bg-foreground/10 text-foreground'
                                     )}
                                   >
-                                    {subItem.title}
+                                    <span>{subItem.title}</span>
+                                    {subItem.external && (
+                                      <ArrowUpRightIcon className="size-4 shrink-0 opacity-70" />
+                                    )}
                                   </LocaleLink>
                                 </NavigationMenuLink>
                               </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <ul className="grid w-[400px] gap-4 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                            {item.items?.map((subItem, subIndex) => {
-                              const isSubItemActive =
-                                subItem.href &&
-                                localePathname.startsWith(subItem.href);
-                              return (
-                                <li key={subIndex}>
-                                  <NavigationMenuLink asChild>
-                                    <LocaleLink
-                                      href={subItem.href || '#'}
-                                      target={
-                                        subItem.external ? '_blank' : undefined
-                                      }
-                                      rel={
-                                        subItem.external
-                                          ? 'noopener noreferrer'
-                                          : undefined
-                                      }
-                                      className={cn(
-                                        'group flex select-none flex-row items-center gap-4 rounded-md',
-                                        'p-2 leading-none no-underline outline-hidden transition-colors',
-                                        isHeroGlass
-                                          ? 'hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white'
-                                          : 'hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-                                        isSubItemActive &&
-                                          (isHeroGlass
-                                            ? 'bg-white/10 text-white'
-                                            : 'bg-accent text-accent-foreground')
-                                      )}
-                                    >
-                                      <div
-                                        className={cn(
-                                          'flex size-8 shrink-0 items-center justify-center transition-colors',
-                                          'bg-transparent text-muted-foreground',
-                                          'group-hover:bg-transparent group-hover:text-accent-foreground',
-                                          'group-focus:bg-transparent group-focus:text-accent-foreground',
-                                          isSubItemActive &&
-                                            'bg-transparent text-accent-foreground'
-                                        )}
-                                      >
-                                        {subItem.icon ? subItem.icon : null}
-                                      </div>
-                                      <div className="flex-1">
-                                        <div
-                                          className={cn(
-                                            'text-sm font-medium text-muted-foreground',
-                                            'group-hover:bg-transparent group-hover:text-accent-foreground',
-                                            'group-focus:bg-transparent group-focus:text-accent-foreground',
-                                            isSubItemActive &&
-                                              'bg-transparent text-accent-foreground'
-                                          )}
-                                        >
-                                          {subItem.title}
-                                        </div>
-                                        {subItem.description && (
-                                          <div
-                                            className={cn(
-                                              'text-sm text-muted-foreground',
-                                              'group-hover:bg-transparent group-hover:text-accent-foreground/80',
-                                              'group-focus:bg-transparent group-focus:text-accent-foreground/80',
-                                              isSubItemActive &&
-                                                'bg-transparent text-accent-foreground/80'
-                                            )}
-                                          >
-                                            {subItem.description}
-                                          </div>
-                                        )}
-                                      </div>
-                                      {subItem.external && (
-                                        <ArrowUpRightIcon
-                                          className={cn(
-                                            'size-4 shrink-0 text-muted-foreground',
-                                            'group-hover:bg-transparent group-hover:text-accent-foreground',
-                                            'group-focus:bg-transparent group-focus:text-accent-foreground',
-                                            isSubItemActive &&
-                                              'bg-transparent text-accent-foreground'
-                                          )}
-                                        />
-                                      )}
-                                    </LocaleLink>
-                                  </NavigationMenuLink>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        )}
+                            );
+                          })}
+                        </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
                   ) : (
@@ -259,10 +168,7 @@ export function Navbar({ scroll }: NavBarProps) {
                               : localePathname.startsWith(item.href)
                             : false
                         }
-                        className={cn(
-                          customNavigationMenuTriggerStyle,
-                          heroNavItemClassName
-                        )}
+                        className={glassNavigationMenuTriggerStyle}
                       >
                         <LocaleLink
                           href={item.href || '#'}
