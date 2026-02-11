@@ -1,39 +1,58 @@
+import { Button } from '@/components/ui/button';
+import { LocaleLink } from '@/i18n/navigation';
 import Image from 'next/image';
 
 interface ToolkitShowcaseProps {
   title: string;
-  caption?: string;
+  subtitle?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  imageAlt: string;
 }
 
 export default function ToolkitShowcase({
   title,
-  caption,
+  subtitle,
+  ctaLabel,
+  ctaHref,
+  imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="px-6 py-12 sm:py-14">
+    <section className="px-6 py-14 sm:py-18">
       <div className="mx-auto max-w-7xl">
-        <p className="text-center text-sm font-medium tracking-wide text-foreground/75">
-          {title}
-        </p>
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-balance font-bricolage-grotesque text-5xl leading-[0.96] tracking-tight sm:text-7xl">
+            {title}
+          </h2>
 
-        <div className="mt-6">
-          <div className="mx-auto w-full max-w-[72rem] rounded-[28px] bg-gradient-to-b from-white/40 via-white/18 to-white/7 p-[1.5px] shadow-[0_16px_38px_rgba(0,0,0,0.5)]">
-            <div className="overflow-hidden rounded-[26px] border border-white/15 bg-black/35">
-              <Image
-                src="/media/toolkit-showcase-grid-20260211.webp"
-                alt="AI Toolkit showcase"
-                width={1280}
-                height={659}
-                className="h-auto w-full object-cover"
-                priority={false}
-              />
-            </div>
-          </div>
-          {caption ? (
-            <p className="mt-3 text-center text-xs text-foreground/60">
-              {caption}
+          {subtitle ? (
+            <p className="mt-4 text-balance text-lg text-foreground/82 sm:text-[1.85rem] sm:leading-tight">
+              {subtitle}
             </p>
           ) : null}
+
+          {ctaLabel && ctaHref ? (
+            <div className="mt-7 flex justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="h-12 rounded-full border border-[#f4e07a]/50 bg-[linear-gradient(180deg,#ffe46f_0%,#e5ca46_100%)] px-10 text-lg font-semibold text-black shadow-[0_10px_28px_rgba(0,0,0,0.35)] hover:brightness-105"
+              >
+                <LocaleLink href={ctaHref}>{ctaLabel}</LocaleLink>
+              </Button>
+            </div>
+          ) : null}
+        </div>
+
+        <div className="mx-auto mt-9 w-full max-w-[96rem]">
+          <Image
+            src="/media/toolkit-showcase-grid-20260211.webp"
+            alt={imageAlt}
+            width={3840}
+            height={1732}
+            className="h-auto w-full"
+            priority={false}
+          />
         </div>
       </div>
     </section>

@@ -781,8 +781,10 @@
         }
       },
       "toolkit": {
-        "title": "AI Toolkit 展示",
-        "caption": "用于展示工具能力与工作流的参考视图。"
+        "title": "AI Toolkit",
+        "subtitle": "面向创作者的有序 AI 工具平台",
+        "cta": "前往 Toolkit",
+        "imageAlt": "AI Toolkit 功能展示图"
       },
       "pain": {
         "title": "AI 视频最大的问题不是画质，是不可控。",

@@ -43,7 +43,9 @@ export default async function HomePage(props: HomePageProps) {
   const primaryHref = session?.user ? Routes.Dashboard : Routes.Login;
 
   const toolkitTitle = t('toolkit.title');
-  const toolkitCaption = t('toolkit.caption');
+  const toolkitSubtitle = t('toolkit.subtitle');
+  const toolkitCta = t('toolkit.cta');
+  const toolkitImageAlt = t('toolkit.imageAlt');
 
   const painItems = [
     {
@@ -114,7 +116,13 @@ export default async function HomePage(props: HomePageProps) {
       {/* Hero frozen by request */}
       <HeroSection primaryHref={primaryHref} secondaryHref="#showcase" />
 
-      <ToolkitShowcase title={toolkitTitle} caption={toolkitCaption} />
+      <ToolkitShowcase
+        title={toolkitTitle}
+        subtitle={toolkitSubtitle}
+        ctaLabel={toolkitCta}
+        ctaHref={primaryHref}
+        imageAlt={toolkitImageAlt}
+      />
 
       {/* Pain points */}
       <section id="features" className="px-6 py-20 sm:py-24">

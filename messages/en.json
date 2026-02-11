@@ -781,8 +781,10 @@
         }
       },
       "toolkit": {
-        "title": "AI Toolkit showcase",
-        "caption": "Reference visual for toolkit capabilities and workflow."
+        "title": "AI Toolkit",
+        "subtitle": "The only organized AI platform for creators",
+        "cta": "Go to Toolkit",
+        "imageAlt": "AI Toolkit visual showcase"
       },
       "pain": {
         "title": "The biggest problem isn’t quality — it’s control.",
