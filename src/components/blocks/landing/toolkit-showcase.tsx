@@ -18,44 +18,42 @@ export default function ToolkitShowcase({
   imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="relative overflow-hidden bg-black px-6 py-24 sm:py-32">
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-8">
-          <div className="flex flex-col items-start text-left">
-            <h2 className="text-balance font-bricolage-grotesque text-5xl font-bold leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl">
+    <section className="relative w-full bg-black py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
+          <div className="flex max-w-xl flex-col items-start">
+            <h2 className="font-bricolage-grotesque text-4xl font-bold leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
               {title}
             </h2>
 
-            {subtitle ? (
-              <p className="mt-6 max-w-lg text-lg text-white/60 sm:text-xl">
+            {subtitle && (
+              <p className="mt-5 text-lg leading-relaxed text-white/72 sm:text-xl">
                 {subtitle}
               </p>
-            ) : null}
+            )}
 
-            {ctaLabel && ctaHref ? (
+            {ctaLabel && ctaHref && (
               <div className="mt-8">
                 <Button
                   asChild
-                  className="group relative h-12 overflow-hidden rounded-full border border-[#FFD700]/40 bg-[#FFD700]/10 px-8 text-base font-medium text-[#FFD700] transition-all duration-300 hover:border-[#FFD700] hover:bg-[#FFD700] hover:text-black hover:shadow-[0_0_20px_rgba(255,215,0,0.3)]"
+                  variant="outline"
+                  className="h-12 rounded-full border-white/25 bg-black/20 px-8 text-base font-medium text-white hover:border-white hover:bg-white hover:text-black"
                 >
-                  <LocaleLink href={ctaHref}>
-                    <span className="relative z-10">{ctaLabel}</span>
-                  </LocaleLink>
+                  <LocaleLink href={ctaHref}>{ctaLabel}</LocaleLink>
                 </Button>
               </div>
-            ) : null}
+            )}
           </div>
 
-          <div className="relative mt-8 lg:mt-0">
-            <div className="absolute -inset-4 rounded-[30px] bg-gradient-to-r from-[#FFD700]/10 to-transparent blur-2xl lg:-inset-8" />
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur-sm">
+          <div className="relative w-full">
+            <div className="relative overflow-hidden rounded-2xl border border-white/12 bg-[#111]">
               <Image
                 src="/media/toolkit-showcase-grid-20260211.webp"
                 alt={imageAlt}
                 width={3840}
                 height={1732}
-                className="h-auto w-full object-cover transition-transform duration-700 hover:scale-105"
-                priority={false}
+                className="h-auto w-full object-cover opacity-92"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

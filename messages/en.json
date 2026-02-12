@@ -754,13 +754,13 @@
       "description": "More stable multi-shot storytelling with better character and scene consistency.",
       "primary": "Start generating",
       "models": [
+        "Seedance",
         "Sora",
         "Veo",
+        "Nano Banana",
         "Kling",
-        "Seedance",
-        "Seedream",
-        "Flux",
-        "ElevenLabs"
+        "Z-Image",
+        "Seedream"
       ],
       "modelsHint": "Model support shown here is placeholder and will be adjusted once integrations are confirmed.",
       "pill": {

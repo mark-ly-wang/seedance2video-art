@@ -754,13 +754,13 @@
       "description": "多镜头叙事更稳，人物与场景更一致。",
       "primary": "免费开始生成",
       "models": [
+        "Seedance",
         "Sora",
         "Veo",
+        "Nano Banana",
         "Kling",
-        "Seedance",
-        "Seedream",
-        "Flux",
-        "ElevenLabs"
+        "Z-Image",
+        "Seedream"
       ],
       "modelsHint": "模型支持展示为占位，后续按实际接入调整。",
       "pill": {
