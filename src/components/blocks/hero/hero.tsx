@@ -264,7 +264,7 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
           <div className="absolute inset-x-0 bottom-0 z-20 h-32 bg-gradient-to-t from-black via-black/70 to-transparent" />
 
           {/* Pill badge at top of video */}
-          <div className="absolute inset-x-0 top-16 z-30 flex justify-center">
+          <div className="absolute inset-x-0 top-20 z-30 flex justify-center">
             <LocaleLink href={t('pill.href')}>
               <Badge
                 variant="outline"
@@ -288,14 +288,14 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
           <Button
             asChild
             size="lg"
-            className="mt-5 h-14 w-full rounded-full border-none bg-[#FFD700] text-xl font-semibold text-black hover:bg-[#f4dc6a]"
+            className="mt-5 h-14 w-full rounded-full border-none bg-[#FFD700] text-xl font-semibold text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] transition-shadow duration-300 hover:bg-[#f4dc6a] hover:shadow-[0_0_24px_rgba(255,215,0,0.5)]"
           >
             <LocaleLink href={primaryHref}>{t('primary')}</LocaleLink>
           </Button>
 
           {/* Mobile Capsule - transparent interior */}
-          <div className="mt-6 w-full rounded-[20px] border border-white/30 p-[1px]">
-            <div className="relative rounded-[18px] border border-white/15 px-3 py-3.5 backdrop-blur-sm">
+          <div className="mt-6 w-full rounded-[20px] border border-white/25 p-[1px]">
+            <div className="relative rounded-[18px] border border-white/12 px-3 py-3.5 backdrop-blur-[2px]">
               <div className="pointer-events-none absolute inset-x-6 top-0 h-6 rounded-full bg-gradient-to-b from-white/20 to-transparent" />
 
               <div className="relative space-y-2.5">
@@ -365,15 +365,15 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
           <Button
             asChild
             size="lg"
-            className="mt-9 h-14 rounded-full border-none bg-[#FFD700] px-12 text-[2rem] font-semibold text-black hover:bg-[#f4dc6a]"
+            className="mt-9 h-14 rounded-full border-none bg-[#FFD700] px-12 text-[2rem] font-semibold text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] transition-shadow duration-300 hover:bg-[#f4dc6a] hover:shadow-[0_0_24px_rgba(255,215,0,0.5)]"
           >
             <LocaleLink href={primaryHref}>{t('primary')}</LocaleLink>
           </Button>
         </div>
 
         <div className="mx-auto w-full max-w-[980px]">
-          <div className="relative rounded-full border border-white/35 p-[1px] shadow-[inset_0_1px_0_rgba(255,255,255,0.32),0_14px_36px_rgba(0,0,0,0.45)]">
-            <div className="relative rounded-full border border-white/18 px-6 py-3.5 backdrop-blur-xl">
+          <div className="relative rounded-full border border-white/25 p-[1px]">
+            <div className="relative rounded-full border border-white/12 px-6 py-3.5 backdrop-blur-[2px]">
               <div className="pointer-events-none absolute inset-x-10 top-0 h-8 rounded-full bg-gradient-to-b from-white/30 to-transparent" />
 
               <div className="relative grid grid-cols-7 items-center gap-x-1.5">
