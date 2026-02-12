@@ -112,7 +112,7 @@ export default async function HomePage(props: HomePageProps) {
   ];
 
   return (
-    <div className="flex flex-col bg-background">
+    <div className="flex flex-col bg-black text-white">
       {/* Hero frozen by request */}
       <HeroSection primaryHref={primaryHref} />
 
@@ -125,30 +125,33 @@ export default async function HomePage(props: HomePageProps) {
       />
 
       {/* Pain points */}
-      <section id="features" className="px-6 py-20 sm:py-24">
+      <section id="features" className="bg-[#0A0A0A] px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+          <div className="mb-16 md:mb-24">
+            <span className="text-sm font-bold tracking-widest text-[#FFD700] uppercase">
+              {t('pain.eyebrow')}
+            </span>
+            <h2 className="mt-4 max-w-4xl text-balance font-bricolage-grotesque text-5xl font-bold leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl">
               {t('pain.title')}
             </h2>
-            <p className="mt-4 text-balance text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-xl text-white/60">
               {t('pain.subtitle')}
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-14">
+          <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
             {painItems.map((item, index) => (
               <article
                 key={item.title}
-                className="group rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition-colors hover:border-white/20"
+                className="group relative overflow-hidden bg-white/[0.03] p-8 transition-colors hover:bg-white/[0.05] sm:p-10"
               >
-                <span className="inline-flex h-8 min-w-8 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-2 text-xs font-semibold text-foreground/80">
-                  {index + 1}
-                </span>
-                <h3 className="mt-4 text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  {item.desc}
-                </p>
+                <div className="absolute top-0 right-0 p-8 opacity-20 font-bricolage-grotesque text-6xl font-bold text-white transition-opacity group-hover:opacity-40">
+                  0{index + 1}
+                </div>
+                <h3 className="mt-8 text-2xl font-bold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-lg text-white/60">{item.desc}</p>
               </article>
             ))}
           </div>
@@ -156,56 +159,50 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* Solution */}
-      <section className="px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-6 sm:p-10">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-6">
-              <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+      <section className="bg-black px-6 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+            <div>
+              <span className="text-sm font-bold tracking-widest text-[#FFD700] uppercase">
+                {t('solution.eyebrow')}
+              </span>
+              <h2 className="mt-4 text-balance font-bricolage-grotesque text-5xl font-bold leading-[0.95] tracking-tight text-white sm:text-6xl">
                 {t('solution.title')}
               </h2>
-              <p className="mt-4 max-w-2xl text-balance text-muted-foreground">
+              <p className="mt-6 text-xl text-white/60">
                 {t('solution.subtitle')}
               </p>
 
-              <div className="mt-10 space-y-4">
+              <div className="mt-12 space-y-12 border-l border-white/10 pl-8">
                 {solutionItems.map((item, index) => (
-                  <article
-                    key={item.title}
-                    className="rounded-2xl border border-white/10 bg-black/20 p-5"
-                  >
-                    <div className="flex items-start gap-3">
-                      <span className="mt-0.5 inline-flex h-6 min-w-6 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] text-xs font-semibold text-foreground/80">
-                        {index + 1}
-                      </span>
-                      <div>
-                        <h3 className="font-semibold">{item.title}</h3>
-                        <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div>
+                  <article key={item.title} className="relative">
+                    <span className="absolute -left-[37px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#FFD700]" />
+                    <h3 className="text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-lg text-white/60">{item.desc}</p>
                   </article>
                 ))}
               </div>
             </div>
 
-            <div className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-white/12 bg-black/30 p-6 shadow-[0_18px_40px_rgba(0,0,0,0.35)]">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.16),transparent_55%),radial-gradient(circle_at_85%_30%,rgba(236,72,153,0.12),transparent_55%),radial-gradient(circle_at_55%_85%,rgba(34,197,94,0.08),transparent_60%)]" />
-                <div className="relative">
-                  <div className="text-xs font-semibold tracking-[0.08em] text-foreground/70 uppercase">
+            <div className="relative">
+              <div className="aspect-[4/5] w-full overflow-hidden bg-[#111]">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/10 via-transparent to-transparent" />
+                <div className="flex h-full flex-col justify-between p-8">
+                  <div className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">
                     {t('solution.visual.title')}
                   </div>
-                  <div className="mt-4 grid gap-3">
+                  <div className="space-y-4">
                     {[1, 2, 3, 4].map((index) => (
                       <div
                         key={index}
-                        className="flex items-center justify-between rounded-xl border border-white/12 bg-white/[0.04] px-4 py-3"
+                        className="flex items-center justify-between border-b border-white/10 py-4 last:border-0"
                       >
-                        <span className="text-sm font-medium">
+                        <span className="font-mono text-sm text-white/80">
                           {t('solution.visual.shotLabel', { index })}
                         </span>
-                        <span className="rounded-full border border-white/20 bg-white/[0.04] px-2.5 py-1 text-xs text-foreground/75">
+                        <span className="text-xs font-medium text-[#FFD700] uppercase">
                           {t('solution.visual.action')}
                         </span>
                       </div>
@@ -219,27 +216,28 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* How it works */}
-      <section className="px-6 py-20 sm:py-24">
+      <section className="bg-[#0A0A0A] px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+          <div className="mb-16 text-center md:mb-24">
+            <span className="text-sm font-bold tracking-widest text-[#FFD700] uppercase">
+              {t('how.eyebrow')}
+            </span>
+            <h2 className="mx-auto mt-4 max-w-3xl text-balance font-bricolage-grotesque text-5xl font-bold leading-[0.95] tracking-tight text-white sm:text-6xl">
               {t('how.title')}
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3 lg:mt-14">
+          <div className="grid gap-8 md:grid-cols-3">
             {steps.map((step, index) => (
-              <article
-                key={step.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.02] p-7"
-              >
-                <div className="inline-flex rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-xs font-medium text-foreground/75">
-                  {t('how.stepLabel', { index: index + 1 })}
-                </div>
-                <h3 className="mt-3 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  {step.desc}
-                </p>
+              <article key={step.title} className="relative pt-8">
+                <div className="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-white/20 to-transparent" />
+                <span className="font-mono text-sm text-[#FFD700]">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-4 text-2xl font-bold text-white">
+                  {step.title}
+                </h3>
+                <p className="mt-4 text-lg text-white/60">{step.desc}</p>
               </article>
             ))}
           </div>
@@ -247,48 +245,53 @@ export default async function HomePage(props: HomePageProps) {
       </section>
 
       {/* Showcase */}
-      <section id="showcase" className="px-6 py-20 sm:py-24">
+      <section id="showcase" className="bg-black px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+          <div className="mb-16 md:mb-24">
+            <span className="text-sm font-bold tracking-widest text-[#FFD700] uppercase">
+              {t('showcase.eyebrow')}
+            </span>
+            <h2 className="mt-4 max-w-4xl text-balance font-bricolage-grotesque text-5xl font-bold leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl">
               {t('showcase.title')}
             </h2>
-            <p className="mt-4 text-balance text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-xl text-white/60">
               {t('showcase.subtitle')}
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3 lg:mt-14">
+          <div className="grid gap-6 md:grid-cols-3 lg:gap-8">
             {showcaseCards.map((card, index) => (
               <article
                 key={card.title}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.02] transition-colors hover:border-white/20"
+                className="group cursor-pointer overflow-hidden bg-[#111]"
               >
-                <div className="relative aspect-[9/16] w-full overflow-hidden bg-gradient-to-b from-white/[0.14] via-white/[0.06] to-white/[0.02]">
-                  <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/25 to-transparent" />
-                  <div className="absolute inset-x-3 bottom-3 rounded-xl border border-white/15 bg-black/25 px-3 py-2 text-xs text-foreground/80 backdrop-blur-sm">
-                    {card.meta}
+                <div className="relative aspect-[9/16] w-full overflow-hidden bg-white/5 transition-transform duration-500 group-hover:scale-[1.02]">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-white border-b-[6px] border-b-transparent ml-1"></div>
+                    </div>
                   </div>
-                  <div className="absolute left-3 top-3 rounded-full border border-white/15 bg-black/35 px-2.5 py-1 text-xs font-medium text-foreground/80">
-                    #{index + 1}
-                  </div>
-                </div>
-                <div className="space-y-2 p-5">
-                  <div className="text-base font-semibold">{card.title}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {card.meta}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {t('showcase.cardHint')}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                    <div className="text-lg font-bold text-white">
+                      {card.title}
+                    </div>
+                    <div className="mt-1 font-mono text-xs text-[#FFD700]">
+                      {card.meta}
+                    </div>
                   </div>
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="mt-10 flex justify-center">
-            <Button asChild size="lg" className="h-11 rounded-full px-7">
-              <LocaleLink href={primaryHref}>{t('showcase.cta')}</LocaleLink>
+          <div className="mt-16 flex justify-center">
+            <Button
+              asChild
+              className="group relative h-14 overflow-hidden rounded-full border border-[#FFD700] bg-transparent px-10 text-lg font-medium text-[#FFD700] transition-all duration-300 hover:bg-[#FFD700] hover:text-black"
+            >
+              <LocaleLink href={primaryHref}>
+                <span className="relative z-10">{t('showcase.cta')}</span>
+              </LocaleLink>
             </Button>
           </div>
         </div>
@@ -298,16 +301,23 @@ export default async function HomePage(props: HomePageProps) {
       <FaqSection />
 
       {/* Final CTA */}
-      <section className="px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/12 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-10 text-center shadow-[0_18px_40px_rgba(0,0,0,0.25)] sm:p-14">
-          <h2 className="mx-auto max-w-3xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+      <section className="bg-[#FFD700] px-6 py-24 text-black sm:py-32">
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="text-sm font-bold tracking-widest text-black/60 uppercase">
+            {t('final.eyebrow')}
+          </span>
+          <h2 className="mt-6 text-balance font-bricolage-grotesque text-5xl font-bold leading-[0.95] tracking-tight sm:text-7xl">
             {t('final.title')}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-balance text-muted-foreground">
+          <p className="mx-auto mt-8 max-w-2xl text-xl font-medium text-black/70">
             {t('final.subtitle')}
           </p>
-          <div className="mt-8 flex justify-center">
-            <Button asChild size="lg" className="h-11 rounded-full px-7">
+          <div className="mt-10 flex justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="h-14 rounded-full bg-black px-10 text-lg font-bold text-white hover:bg-black/80"
+            >
               <LocaleLink href={primaryHref}>{t('final.cta')}</LocaleLink>
             </Button>
           </div>

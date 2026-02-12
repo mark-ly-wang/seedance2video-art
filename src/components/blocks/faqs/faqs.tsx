@@ -46,39 +46,35 @@ export default function FaqSection() {
   ];
 
   return (
-    <section id="faqs" className="px-6 py-20 sm:py-24">
-      <div className="mx-auto max-w-5xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold tracking-[0.1em] text-foreground/70 uppercase">
-            {t('title')}
-          </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            {t('subtitle')}
-          </h2>
-        </div>
+    <section id="faqs" className="bg-[#0A0A0A] px-6 py-20 sm:py-32">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-24">
+          <div>
+            <span className="text-sm font-bold tracking-widest text-[#FFD700] uppercase">
+              {t('title')}
+            </span>
+            <h2 className="mt-4 text-balance font-bricolage-grotesque text-4xl font-bold leading-[0.95] tracking-tight text-white sm:text-5xl">
+              {t('subtitle')}
+            </h2>
+          </div>
 
-        <Accordion
-          type="single"
-          collapsible
-          className="mt-12 w-full rounded-3xl border border-white/10 bg-white/[0.02] px-6 py-3 sm:px-8"
-        >
-          {faqItems.map((item) => (
-            <AccordionItem
-              key={item.id}
-              value={item.id}
-              className="border-b border-white/10"
-            >
-              <AccordionTrigger className="cursor-pointer py-5 text-left text-base font-medium leading-7 hover:no-underline">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="pb-3 text-sm leading-7 text-muted-foreground sm:text-base">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqItems.map((item) => (
+              <AccordionItem
+                key={item.id}
+                value={item.id}
+                className="border-none bg-white/[0.03] px-6 transition-colors hover:bg-white/[0.05]"
+              >
+                <AccordionTrigger className="py-6 text-left text-lg font-medium text-white hover:no-underline hover:text-[#FFD700]">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 text-base leading-7 text-white/60">
                   {item.answer}
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );
