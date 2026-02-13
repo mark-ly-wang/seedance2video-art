@@ -79,3 +79,6 @@ logs/security/
 
 # sisyphus workflow artifacts
 .sisyphus/
+
+# local temporary research artifacts
+tmp/
