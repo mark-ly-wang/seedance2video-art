@@ -288,9 +288,12 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
           <Button
             asChild
             size="lg"
-            className="mt-5 h-14 w-full rounded-full border-none bg-[#FFD700] text-xl font-semibold text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] transition-shadow duration-300 hover:bg-[#f4dc6a] hover:shadow-[0_0_24px_rgba(255,215,0,0.5)]"
+            className="group relative mt-5 h-12 w-full overflow-hidden rounded-full border border-white/20 bg-gradient-to-br from-[#FFD700] via-[#F4DC6A] to-[#FFD700] text-base font-semibold text-black/90 shadow-[0_0_20px_rgba(255,215,0,0.3)] backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#ffe033] hover:via-[#ffeb85] hover:to-[#ffe033] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]"
           >
-            <LocaleLink href={primaryHref}>{t('primary')}</LocaleLink>
+            <LocaleLink href={primaryHref}>
+              <span className="relative z-10">{t('primary')}</span>
+              <div className="absolute inset-x-0 top-0 h-[50%] bg-gradient-to-b from-white/40 to-transparent opacity-100" />
+            </LocaleLink>
           </Button>
 
           {/* Mobile Capsule - transparent interior */}
@@ -303,7 +306,7 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
                   {mobileTopRow.map((item) => (
                     <span
                       key={item.key}
-                      className="flex min-w-0 items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
+                      className="flex w-full min-w-0 items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
                     >
                       <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center">
                         <ModelLogo model={item.key} />
@@ -315,11 +318,11 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
                   ))}
                 </div>
 
-                <div className="mx-auto grid max-w-[80%] grid-cols-3 gap-2">
+                <div className="mx-auto grid max-w-[75%] grid-cols-3 gap-2">
                   {mobileBottomRow.map((item) => (
                     <span
                       key={item.key}
-                      className="flex min-w-0 items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
+                      className="flex w-full min-w-0 items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
                     >
                       <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center">
                         <ModelLogo model={item.key} />
@@ -334,7 +337,7 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
             </div>
           </div>
 
-          <p className="mx-auto mt-5 max-w-[22rem] text-balance text-center text-[15px] leading-relaxed text-white/75">
+          <p className="mx-auto mt-5 max-w-[22rem] text-balance text-center text-[14px] leading-relaxed text-white/75">
             {t('description')}
           </p>
         </div>
@@ -358,16 +361,19 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
             {t('title')}
           </h1>
 
-          <p className="mt-5 max-w-3xl text-balance text-[clamp(1.35rem,1.8vw,2rem)] leading-[1.3] text-white/82">
+          <p className="mt-5 max-w-3xl text-balance text-[clamp(1.05rem,1.35vw,1.45rem)] leading-[1.3] text-white/82">
             {t('description')}
           </p>
 
           <Button
             asChild
             size="lg"
-            className="mt-9 h-14 rounded-full border-none bg-[#FFD700] px-12 text-[2rem] font-semibold text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] transition-shadow duration-300 hover:bg-[#f4dc6a] hover:shadow-[0_0_24px_rgba(255,215,0,0.5)]"
+            className="group relative mt-9 h-[52px] overflow-hidden rounded-full border border-white/20 bg-gradient-to-br from-[#FFD700] via-[#F4DC6A] to-[#FFD700] px-10 text-[1.25rem] font-semibold text-black/90 shadow-[0_0_20px_rgba(255,215,0,0.3)] backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#ffe033] hover:via-[#ffeb85] hover:to-[#ffe033] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]"
           >
-            <LocaleLink href={primaryHref}>{t('primary')}</LocaleLink>
+            <LocaleLink href={primaryHref}>
+              <span className="relative z-10">{t('primary')}</span>
+              <div className="absolute inset-x-0 top-0 h-[50%] bg-gradient-to-b from-white/40 to-transparent opacity-100" />
+            </LocaleLink>
           </Button>
         </div>
 
@@ -380,7 +386,7 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
                 {modelItems.map((item) => (
                   <span
                     key={item.key}
-                    className="flex min-w-0 items-center justify-center gap-2 whitespace-nowrap text-[0.98rem] text-white/95"
+                    className="flex w-full min-w-0 items-center justify-center gap-2 whitespace-nowrap text-[0.98rem] text-white/95"
                   >
                     <span className="inline-flex h-[18px] w-[18px] items-center justify-center text-white/95">
                       <ModelLogo model={item.key} />
