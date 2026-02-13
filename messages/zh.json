@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "name": "MkSaaS Demo",
+    "name": "SeedanceArt",
     "title": "MkSaaS - 最好的 AI SaaS 模板",
     "description": "MkSaaS 是构建 AI SaaS 的最佳模板，使用 MkSaaS 可以在几天内轻松构建您的 AI SaaS，简单且毫不费力。"
   },
@@ -321,6 +321,12 @@
   },
   "Marketing": {
     "navbar": {
+      "toolkit": {
+        "title": "AI Toolkit"
+      },
+      "templates": {
+        "title": "模板"
+      },
       "features": {
         "title": "功能"
       },
@@ -874,9 +880,9 @@
           }
         }
       },
-      "artlist": {
+      "seedanceArt": {
         "creators": {
-          "title": "10K+ 创作者\n选择 seedance2video",
+          "title": "10K+ 创作者\n选择 SeedanceArt",
           "points": {
             "point-1": "完整的创意 AI 生态系统",
             "point-2": "持续迭代先进 AI 模型",
@@ -890,19 +896,19 @@
           "items": {
             "music": {
               "title": "音乐",
-              "href": "https://artlist.io/royalty-free-music"
+              "href": "/pricing"
             },
             "sfx": {
               "title": "音效",
-              "href": "https://artlist.io/sfx"
+              "href": "/pricing"
             },
             "footage": {
               "title": "素材",
-              "href": "https://artlist.io/stock-footage"
+              "href": "/pricing"
             },
             "templates": {
               "title": "模板",
-              "href": "https://artlist.io/video-templates"
+              "href": "/pricing"
             }
           }
         },
@@ -910,16 +916,16 @@
           "title": "找到适合你的\n完美方案",
           "creators": {
             "title": "创作者",
-            "description": "获取完整 AI 套件、高质量创意素材，或 seedance2video 提供的一切内容，并由适合你的授权范围覆盖。",
+            "description": "获取完整 AI 套件、高质量创意素材，或 SeedanceArt 提供的一切内容，并由适合你的授权范围覆盖。",
             "cta": "查看方案",
-            "href": "https://artlist.io/page/pricing/max?tab=ai-suite",
+            "href": "/pricing",
             "imageAlt": "创作者方案视觉图"
           },
           "business": {
             "title": "企业",
             "description": "为你的品牌、团队或机构提供无限素材和先进 AI 工具，以安全、规模化方式创作，并配套完善的企业授权。",
             "cta": "了解更多",
-            "href": "https://artlist.io/enterprise"
+            "href": "/pricing"
           }
         },
         "startFree": {
@@ -930,60 +936,60 @@
           "title": "常见问题",
           "items": {
             "item-1": {
-              "question": "什么是 seedance2video？",
-              "answer": "seedance2video 为创作者提供视频制作所需的一切，并集中在同一个平台。你可以获取高质量数字素材（音乐、音效、视频素材、模板和 LUT），以及图像、视频、配音等先进 AI 生成工具。"
+              "question": "什么是 SeedanceArt？",
+              "answer": "SeedanceArt 为创作者提供视频制作所需的一切，并集中在同一个平台。你可以获取高质量数字素材（音乐、音效、视频素材、模板和 LUT），以及图像、视频、配音等先进 AI 生成工具。"
             },
             "item-2": {
-              "question": "seedance2video 的素材是免版税的吗？",
-              "answer": "seedance2video 的数字素材均为免版税，这意味着你可以在视频中使用它们，而无需担心<linkMusic>音乐授权</linkMusic>或额外版税费用。"
+              "question": "SeedanceArt 的素材是免版税的吗？",
+              "answer": "SeedanceArt 的数字素材均为免版税，这意味着你可以在视频中使用它们，而无需担心<linkMusic>音乐授权</linkMusic>或额外版税费用。"
             },
             "item-3": {
-              "question": "我可以免费试用 seedance2video 吗？",
+              "question": "我可以免费试用 SeedanceArt 吗？",
               "answer": "可以。使用免费账号，你可以免费生成图片、视频和配音，也可以访问带水印的音乐与素材，并在 Arboards 中保存你喜欢的内容。若要无限下载无水印素材并用于项目，需要开通付费订阅。"
             },
             "item-4": {
-              "question": "seedance2video 提供哪些方案？各自覆盖什么内容？",
-              "answer": "seedance2video 提供多种方案：<linkAiSuite>AI 套件</linkAiSuite>、<linkAiVoiceover>AI 配音</linkAiVoiceover>、<linkMusicSfx>音乐与音效</linkMusicSfx>、<linkFootageTemplates>素材与模板</linkFootageTemplates>，以及<linkArtlistMax>Max 全量方案</linkArtlistMax>。其中一体化订阅可无限访问素材库中的所有 AI 工具与素材。你可以选择专业版授权（覆盖全球各类视频用途，含商业用途），或仅覆盖社媒频道的个人社媒版授权。"
+              "question": "SeedanceArt 提供哪些方案？各自覆盖什么内容？",
+              "answer": "SeedanceArt 提供多种方案：<linkAiSuite>AI 套件</linkAiSuite>、<linkAiVoiceover>AI 配音</linkAiVoiceover>、<linkMusicSfx>音乐与音效</linkMusicSfx>、<linkFootageTemplates>素材与模板</linkFootageTemplates>，以及<linkSeedanceArtMax>Max 全量方案</linkSeedanceArtMax>。其中一体化订阅可无限访问素材库中的所有 AI 工具与素材。你可以选择专业版授权（覆盖全球各类视频用途，含商业用途），或仅覆盖社媒频道的个人社媒版授权。"
             },
             "item-5": {
               "question": "什么是企业方案？它覆盖哪些内容？",
-              "answer": "seedance2video 的企业方案为规模化创作团队设计，提供你所需的安全性与创作自由。它包含企业授权，可覆盖任意平台、任意地区的项目。你将获得可随时扩展席位的多用户账号。方案包含先进的<linkAiImageGenerators>AI 图像生成</linkAiImageGenerators>、<linkVideoGeneration>视频生成</linkVideoGeneration>、<linkAiVoiceovers>AI 配音</linkAiVoiceovers>、视频剪辑插件，以及对音乐、音效、素材、模板和 LUT 的无限访问。了解更多请查看<linkBusinessPlan>企业方案</linkBusinessPlan>。"
+              "answer": "SeedanceArt 的企业方案为规模化创作团队设计，提供你所需的安全性与创作自由。它包含企业授权，可覆盖任意平台、任意地区的项目。你将获得可随时扩展席位的多用户账号。方案包含先进的<linkAiImageGenerators>AI 图像生成</linkAiImageGenerators>、<linkVideoGeneration>视频生成</linkVideoGeneration>、<linkAiVoiceovers>AI 配音</linkAiVoiceovers>、视频剪辑插件，以及对音乐、音效、素材、模板和 LUT 的无限访问。了解更多请查看<linkBusinessPlan>企业方案</linkBusinessPlan>。"
             },
             "item-6": {
-              "question": "seedance2video 有多少数字素材？",
-              "answer": "seedance2video 为视频创作者提供超过 900K+ 份数字素材，包括免版税音乐、音效、视频素材、视频模板和 LUT。素材库包含平台独家原创内容，并且每天持续更新。无论是直接检索，还是用 AI 生成，你都能为不同项目找到合适素材。"
+              "question": "SeedanceArt 有多少数字素材？",
+              "answer": "SeedanceArt 为视频创作者提供超过 900K+ 份数字素材，包括免版税音乐、音效、视频素材、视频模板和 LUT。素材库包含平台独家原创内容，并且每天持续更新。无论是直接检索，还是用 AI 生成，你都能为不同项目找到合适素材。"
             },
             "item-7": {
-              "question": "seedance2video 提供哪些 AI 生成工具？",
-              "answer": "seedance2video 提供 AI 视频生成（含<linkTextToVideo>文本生成视频</linkTextToVideo>与图生视频）、AI 图像生成与编辑（含文生图与<linkImageToImage>图生图</linkImageToImage>），以及 AI 配音生成（含文本转语音、<linkVoiceToVoice>声音转声音</linkVoiceToVoice>与<linkVoiceCloning>声音克隆</linkVoiceCloning>）。所有 AI 工具都由当前先进模型驱动。"
+              "question": "SeedanceArt 提供哪些 AI 生成工具？",
+              "answer": "SeedanceArt 提供 AI 视频生成（含<linkTextToVideo>文本生成视频</linkTextToVideo>与图生视频）、AI 图像生成与编辑（含文生图与<linkImageToImage>图生图</linkImageToImage>），以及 AI 配音生成（含文本转语音、<linkVoiceToVoice>声音转声音</linkVoiceToVoice>与<linkVoiceCloning>声音克隆</linkVoiceCloning>）。所有 AI 工具都由当前先进模型驱动。"
             },
             "item-8": {
               "question": "我是否拥有 AI 生成内容的权利？可以商用吗？",
-              "answer": "可以。你在 seedance2video 生成的内容默认附带完整使用权，你可以在授权与<linkTerms>使用条款</linkTerms>范围内自由使用、改编、分发与商业化。seedance2video 不会主张你的 AI 输出所有权。请确保你的内容遵守第三方权益，如商标、知识产权与个人肖像权。"
+              "answer": "可以。你在 SeedanceArt 生成的内容默认附带完整使用权，你可以在授权与<linkTerms>使用条款</linkTerms>范围内自由使用、改编、分发与商业化。SeedanceArt 不会主张你的 AI 输出所有权。请确保你的内容遵守第三方权益，如商标、知识产权与个人肖像权。"
             },
             "item-9": {
               "question": "我生成的内容会被用于训练 AI 模型吗？",
-              "answer": "不会。seedance2video 及其合作方不会使用你的提示词、上传内容或生成结果来训练 AI 模型。你创建的内容只属于你，并受到严格安全标准保护，仅你可访问。"
+              "answer": "不会。SeedanceArt 及其合作方不会使用你的提示词、上传内容或生成结果来训练 AI 模型。你创建的内容只属于你，并受到严格安全标准保护，仅你可访问。"
             }
           },
           "helpText": "还有疑问？我们随时为你提供<help>帮助</help>",
           "links": {
-            "musicLicensing": "https://artlist.io/royalty-free-music",
-            "aiSuite": "https://artlist.io/page/pricing/max?ai_suite_modal=1",
-            "aiVoiceover": "https://artlist.io/voice-over?ai_suite_modal=1",
-            "musicSfx": "https://artlist.io/page/pricing/max?music_sfx_modal=1",
-            "footageTemplates": "https://artlist.io/page/pricing/max?footage_templates_modal=1",
-            "artlistMax": "https://artlist.io/page/pricing/max",
-            "aiImageGenerators": "https://artlist.io/text-to-image-ai",
-            "videoGeneration": "https://artlist.io/image-to-video-ai",
-            "aiVoiceovers": "https://artlist.io/voice-over",
-            "businessPlan": "https://artlist.io/enterprise",
-            "textToVideo": "https://artlist.io/text-to-video-ai",
-            "imageToImage": "https://artlist.io/image-to-image-ai",
-            "voiceToVoice": "https://artlist.io/voice-over/voice-to-voice",
-            "voiceCloning": "https://artlist.io/voice-over/voice-cloning",
-            "termsOfUse": "https://artlist.io/help-center/privacy-terms/terms-of-use",
-            "help": "https://artlist.io/support"
+            "musicLicensing": "/pricing",
+            "aiSuite": "/pricing",
+            "aiVoiceover": "/pricing",
+            "musicSfx": "/pricing",
+            "footageTemplates": "/pricing",
+            "seedanceArtMax": "/pricing",
+            "aiImageGenerators": "/pricing",
+            "videoGeneration": "/pricing",
+            "aiVoiceovers": "/pricing",
+            "businessPlan": "/pricing",
+            "textToVideo": "/pricing",
+            "imageToImage": "/pricing",
+            "voiceToVoice": "/pricing",
+            "voiceCloning": "/pricing",
+            "termsOfUse": "/terms",
+            "help": "/contact"
           }
         }
       },

@@ -62,7 +62,7 @@ export default function LocaleSwitcher() {
         <Button
           variant="ghost"
           size="sm"
-          className="size-8 p-0.5 border border-border rounded-full cursor-pointer"
+          className="size-8 rounded-full border border-white/25 bg-black/25 p-0.5 text-white/90 backdrop-blur-sm transition-colors hover:bg-white/10 hover:text-white"
         >
           <Languages className="size-3" />
           <span className="sr-only">{t('language')}</span>

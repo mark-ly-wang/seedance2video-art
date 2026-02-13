@@ -15,25 +15,25 @@ import { useTranslations } from 'next-intl';
 const STOCK_ITEMS = [
   {
     key: 'music',
-    image: '/media/artlist-home/music.jpg',
+    image: '/media/seedance-art-home/music.jpg',
     titleKey: 'catalog.items.music.title',
     hrefKey: 'catalog.items.music.href',
   },
   {
     key: 'sfx',
-    image: '/media/artlist-home/sfx.jpg',
+    image: '/media/seedance-art-home/sfx.jpg',
     titleKey: 'catalog.items.sfx.title',
     hrefKey: 'catalog.items.sfx.href',
   },
   {
     key: 'footage',
-    image: '/media/artlist-home/footage.jpg',
+    image: '/media/seedance-art-home/footage.jpg',
     titleKey: 'catalog.items.footage.title',
     hrefKey: 'catalog.items.footage.href',
   },
   {
     key: 'templates',
-    image: '/media/artlist-home/templates.jpg',
+    image: '/media/seedance-art-home/templates.jpg',
     titleKey: 'catalog.items.templates.title',
     hrefKey: 'catalog.items.templates.href',
   },
@@ -57,14 +57,14 @@ const FAQ_IDS = [
   'item-9',
 ] as const;
 
-export default function ArtlistFollowingSections() {
-  const t = useTranslations('HomePage.landing.artlist');
+export default function SeedanceArtFollowingSections() {
+  const t = useTranslations('HomePage.landing.seedanceArt');
 
   return (
     <>
       <section className="relative overflow-hidden bg-black px-7 py-24 sm:py-28 lg:py-32">
         <Image
-          src="/media/artlist-home/why-artlist-bg.jpg"
+          src="/media/seedance-art-home/why-seedance-art-bg.jpg"
           alt=""
           fill
           className="object-cover"
@@ -96,7 +96,7 @@ export default function ArtlistFollowingSections() {
         </div>
       </section>
 
-      <section className="bg-black px-7 py-24 sm:py-28 lg:py-32">
+      <section id="templates" className="bg-black px-7 py-24 sm:py-28 lg:py-32">
         <div className="mx-auto w-full max-w-[1536px]">
           <h2 className="mx-auto max-w-[700px] whitespace-pre-line text-center font-serif text-[2.85rem] font-light leading-[0.88] tracking-[-0.03em] text-white sm:text-[3.8rem] lg:text-[5.25rem]">
             {t('catalog.title')}
@@ -249,7 +249,7 @@ export default function ArtlistFollowingSections() {
 
           <div className="relative mt-10 hidden h-[clamp(27.8rem,31vw,38.6rem)] w-[clamp(21.9rem,30vw,30.7rem)] overflow-hidden lg:block">
             <Image
-              src="/media/artlist-home/plan-1.jpg"
+              src="/media/seedance-art-home/plan-1.jpg"
               alt={t('plan.creators.imageAlt')}
               fill
               className="h-full w-full object-cover"
@@ -262,7 +262,7 @@ export default function ArtlistFollowingSections() {
       <section className="relative bg-black px-4 pt-24 sm:pt-28 lg:px-8 lg:pt-32">
         <div className="relative mx-auto w-full">
           <Image
-            src="/media/artlist-home/running-mobile-1.jpg"
+            src="/media/seedance-art-home/running-mobile-1.jpg"
             alt={t('startFree.imageAlt')}
             width={1320}
             height={520}
@@ -270,7 +270,7 @@ export default function ArtlistFollowingSections() {
             sizes="100vw"
           />
           <Image
-            src="/media/artlist-home/running-desktop-1.jpg"
+            src="/media/seedance-art-home/running-desktop-1.jpg"
             alt={t('startFree.imageAlt')}
             width={1920}
             height={756}
@@ -356,9 +356,9 @@ export default function ArtlistFollowingSections() {
                         {chunks}
                       </a>
                     ),
-                    linkArtlistMax: (chunks) => (
+                    linkSeedanceArtMax: (chunks) => (
                       <a
-                        href={t('faq.links.artlistMax')}
+                        href={t('faq.links.seedanceArtMax')}
                         className="underline underline-offset-2"
                       >
                         {chunks}

@@ -217,7 +217,8 @@ export function Navbar({ scroll }: NavBarProps) {
                     buttonVariants({
                       variant: 'default',
                       size: 'sm',
-                    })
+                    }),
+                    'border-[#f3d13e] bg-[#FFD700] text-black hover:bg-[#ffe34a] hover:text-black'
                   )}
                 >
                   {t('Common.signUp')}

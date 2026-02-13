@@ -18,7 +18,7 @@ export default function ToolkitShowcase({
   imageAlt,
 }: ToolkitShowcaseProps) {
   return (
-    <section className="relative w-full bg-black py-10 sm:py-14">
+    <section id="toolkit" className="relative w-full bg-black py-10 sm:py-14">
       <div className="mx-auto max-w-[1536px] px-6">
         <div className="flex flex-col items-center text-center">
           <h2 className="font-bricolage-grotesque text-4xl font-bold leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">

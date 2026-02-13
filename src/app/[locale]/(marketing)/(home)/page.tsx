@@ -1,5 +1,5 @@
 import HeroSection from '@/components/blocks/hero/hero';
-import ArtlistFollowingSections from '@/components/blocks/landing/artlist-following-sections';
+import SeedanceArtFollowingSections from '@/components/blocks/landing/seedance-art-following-sections';
 import FeaturedAiModels from '@/components/blocks/landing/featured-ai-models';
 import ToolkitShowcase from '@/components/blocks/landing/toolkit-showcase';
 import CrispChat from '@/components/layout/crisp-chat';
@@ -61,7 +61,7 @@ export default async function HomePage(props: HomePageProps) {
 
       <FeaturedAiModels />
 
-      <ArtlistFollowingSections />
+      <SeedanceArtFollowingSections />
 
       <CrispChat />
     </div>

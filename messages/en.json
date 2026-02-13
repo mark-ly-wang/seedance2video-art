@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "name": "MkSaaS Demo",
+    "name": "SeedanceArt",
     "title": "MkSaaS - The Best AI SaaS Boilerplate",
     "description": "MkSaaS is the best AI SaaS boilerplate. Make AI SaaS in days, simply and effortlessly"
   },
@@ -321,6 +321,12 @@
   },
   "Marketing": {
     "navbar": {
+      "toolkit": {
+        "title": "AI Toolkit"
+      },
+      "templates": {
+        "title": "Templates"
+      },
       "features": {
         "title": "Features"
       },
@@ -874,9 +880,9 @@
           }
         }
       },
-      "artlist": {
+      "seedanceArt": {
         "creators": {
-          "title": "10K+ creators\nchoose seedance2video",
+          "title": "10K+ creators\nchoose SeedanceArt",
           "points": {
             "point-1": "The complete creative AI ecosystem",
             "point-2": "Always evolving with advanced AI models",
@@ -890,19 +896,19 @@
           "items": {
             "music": {
               "title": "Music",
-              "href": "https://artlist.io/royalty-free-music"
+              "href": "/pricing"
             },
             "sfx": {
               "title": "SFX",
-              "href": "https://artlist.io/sfx"
+              "href": "/pricing"
             },
             "footage": {
               "title": "Footage",
-              "href": "https://artlist.io/stock-footage"
+              "href": "/pricing"
             },
             "templates": {
               "title": "Templates",
-              "href": "https://artlist.io/video-templates"
+              "href": "/pricing"
             }
           }
         },
@@ -910,16 +916,16 @@
           "title": "Find your\nperfect plan",
           "creators": {
             "title": "Creators",
-            "description": "Get the full AI Suite, highest-quality creative assets, or everything Artlist has to offer, all covered by the right license for you.",
+            "description": "Get the full AI Suite, highest-quality creative assets, or everything SeedanceArt has to offer, all covered by the right license for you.",
             "cta": "See Plans",
-            "href": "https://artlist.io/page/pricing/max?tab=ai-suite",
+            "href": "/pricing",
             "imageAlt": "Creators plan visual"
           },
           "business": {
             "title": "Businesses",
             "description": "Give your brand, team, or agency unlimited assets and advanced AI tools to create securely and at scale - backed by the perfect business license.",
             "cta": "Learn More",
-            "href": "https://artlist.io/enterprise"
+            "href": "/pricing"
           }
         },
         "startFree": {
@@ -930,60 +936,60 @@
           "title": "Frequently asked questions",
           "items": {
             "item-1": {
-              "question": "What is Artlist?",
-              "answer": "Artlist is where creators get everything they need to make video content, all in one place. You get access to high-quality digital assets from our stock catalog (music, sound effects, footage, templates, and LUTs), plus advanced AI generation tools for image, video, and voiceovers."
+              "question": "What is SeedanceArt?",
+              "answer": "SeedanceArt is where creators get everything they need to make video content, all in one place. You get access to high-quality digital assets from our stock catalog (music, sound effects, footage, templates, and LUTs), plus advanced AI generation tools for image, video, and voiceovers."
             },
             "item-2": {
-              "question": "Are Artlist assets royalty-free?",
-              "answer": "Artlist's digital assets are all royalty-free, meaning that you can use them in your videos without having to worry about <linkMusic>music licensing</linkMusic> or paying royalty fees."
+              "question": "Are SeedanceArt assets royalty-free?",
+              "answer": "SeedanceArt's digital assets are all royalty-free, meaning that you can use them in your videos without having to worry about <linkMusic>music licensing</linkMusic> or paying royalty fees."
             },
             "item-3": {
-              "question": "Can I try Artlist for free?",
+              "question": "Can I try SeedanceArt for free?",
               "answer": "Yes. With a free account, you can generate images, videos, and voiceovers for free and access watermarked songs and footage, and save your favorite assets in Arboards. To download unlimited unwatermarked assets and use them in your projects, you'll need a paid subscription."
             },
             "item-4": {
-              "question": "What plans does Artlist offer, and what do they cover?",
-              "answer": "Artlist offers several plan options: <linkAiSuite>AI Suite</linkAiSuite>, <linkAiVoiceover>AI Voiceover</linkAiVoiceover>, <linkMusicSfx>Music & SFX</linkMusicSfx>, <linkFootageTemplates>Footage & Templates</linkFootageTemplates>, and <linkArtlistMax>Artlist Max</linkArtlistMax> - an all-in-one subscription with unlimited access to every AI tool and asset in the catalog. You can choose a Pro license, which covers all types of video worldwide (including commercial use), or a personal Social license for social media channels only."
+              "question": "What plans does SeedanceArt offer, and what do they cover?",
+              "answer": "SeedanceArt offers several plan options: <linkAiSuite>AI Suite</linkAiSuite>, <linkAiVoiceover>AI Voiceover</linkAiVoiceover>, <linkMusicSfx>Music & SFX</linkMusicSfx>, <linkFootageTemplates>Footage & Templates</linkFootageTemplates>, and <linkSeedanceArtMax>SeedanceArt Max</linkSeedanceArtMax> - an all-in-one subscription with unlimited access to every AI tool and asset in the catalog. You can choose a Pro license, which covers all types of video worldwide (including commercial use), or a personal Social license for social media channels only."
             },
             "item-5": {
               "question": "What is the business plan, and what does it cover?",
-              "answer": "Artlist's Business plan is built for teams creating at scale, with the robust security and freedom you need. It includes a Business license that covers projects on every platform, anywhere. You'll get a multi-user account with seats you can add any time. The plan includes cutting-edge <linkAiImageGenerators>AI image generators</linkAiImageGenerators> and <linkVideoGeneration>video generation</linkVideoGeneration>, <linkAiVoiceovers>AI voiceovers</linkAiVoiceovers>, video-editing plugins, and unlimited access to music, sound effects, footage, templates, and LUTs. Learn more about the <linkBusinessPlan>Business plan</linkBusinessPlan>."
+              "answer": "SeedanceArt's Business plan is built for teams creating at scale, with the robust security and freedom you need. It includes a Business license that covers projects on every platform, anywhere. You'll get a multi-user account with seats you can add any time. The plan includes cutting-edge <linkAiImageGenerators>AI image generators</linkAiImageGenerators> and <linkVideoGeneration>video generation</linkVideoGeneration>, <linkAiVoiceovers>AI voiceovers</linkAiVoiceovers>, video-editing plugins, and unlimited access to music, sound effects, footage, templates, and LUTs. Learn more about the <linkBusinessPlan>Business plan</linkBusinessPlan>."
             },
             "item-6": {
-              "question": "How many digital assets are available on Artlist?",
-              "answer": "Artlist offers over 900K+ digital assets for video creators, including royalty-free music, sound effects, stock footage, video templates, and LUTs. Our catalog includes original content that is exclusive to Artlist, and it is updated with fresh assets daily. On Artlist, you can find the perfect asset for every project need, whether you find it or generate it with AI."
+              "question": "How many digital assets are available on SeedanceArt?",
+              "answer": "SeedanceArt offers over 900K+ digital assets for video creators, including royalty-free music, sound effects, stock footage, video templates, and LUTs. Our catalog includes original content that is exclusive to SeedanceArt, and it is updated with fresh assets daily. On SeedanceArt, you can find the perfect asset for every project need, whether you find it or generate it with AI."
             },
             "item-7": {
-              "question": "What types of AI generation tools does Artlist offer?",
-              "answer": "Artlist offers AI video generation, including <linkTextToVideo>text-to-video</linkTextToVideo> and image-to-video; AI image generation and editing, including text-to-image and <linkImageToImage>image-to-image</linkImageToImage>; and AI voiceover generation, including text-to-voice, <linkVoiceToVoice>voice-to-voice</linkVoiceToVoice>, and <linkVoiceCloning>voice cloning</linkVoiceCloning>. Every AI tool is powered by the most advanced models available today."
+              "question": "What types of AI generation tools does SeedanceArt offer?",
+              "answer": "SeedanceArt offers AI video generation, including <linkTextToVideo>text-to-video</linkTextToVideo> and image-to-video; AI image generation and editing, including text-to-image and <linkImageToImage>image-to-image</linkImageToImage>; and AI voiceover generation, including text-to-voice, <linkVoiceToVoice>voice-to-voice</linkVoiceToVoice>, and <linkVoiceCloning>voice cloning</linkVoiceCloning>. Every AI tool is powered by the most advanced models available today."
             },
             "item-8": {
               "question": "Do I have the rights to AI-generated content? Can I use it for commercial purposes?",
-              "answer": "Yes. Any content you generate with Artlist comes with full rights - you can use, adapt, distribute and monetize it without restriction, limited only by our License and <linkTerms>Terms of Use</linkTerms>. Artlist has no claim over your AI outputs. Just be sure your content respects third-party rights such as trademarks, intellectual property, and personal likeness."
+              "answer": "Yes. Any content you generate with SeedanceArt comes with full rights - you can use, adapt, distribute and monetize it without restriction, limited only by our License and <linkTerms>Terms of Use</linkTerms>. SeedanceArt has no claim over your AI outputs. Just be sure your content respects third-party rights such as trademarks, intellectual property, and personal likeness."
             },
             "item-9": {
               "question": "Is my generated content used to train AI models?",
-              "answer": "No. Artlist and its partners never use your prompts, uploads or outputs to train AI models. Everything you create is yours alone, protected by strict security standards and accessible only to you."
+              "answer": "No. SeedanceArt and its partners never use your prompts, uploads or outputs to train AI models. Everything you create is yours alone, protected by strict security standards and accessible only to you."
             }
           },
           "helpText": "Still have questions? We're here to <help>help</help>",
           "links": {
-            "musicLicensing": "https://artlist.io/royalty-free-music",
-            "aiSuite": "https://artlist.io/page/pricing/max?ai_suite_modal=1",
-            "aiVoiceover": "https://artlist.io/voice-over?ai_suite_modal=1",
-            "musicSfx": "https://artlist.io/page/pricing/max?music_sfx_modal=1",
-            "footageTemplates": "https://artlist.io/page/pricing/max?footage_templates_modal=1",
-            "artlistMax": "https://artlist.io/page/pricing/max",
-            "aiImageGenerators": "https://artlist.io/text-to-image-ai",
-            "videoGeneration": "https://artlist.io/image-to-video-ai",
-            "aiVoiceovers": "https://artlist.io/voice-over",
-            "businessPlan": "https://artlist.io/enterprise",
-            "textToVideo": "https://artlist.io/text-to-video-ai",
-            "imageToImage": "https://artlist.io/image-to-image-ai",
-            "voiceToVoice": "https://artlist.io/voice-over/voice-to-voice",
-            "voiceCloning": "https://artlist.io/voice-over/voice-cloning",
-            "termsOfUse": "https://artlist.io/help-center/privacy-terms/terms-of-use",
-            "help": "https://artlist.io/support"
+            "musicLicensing": "/pricing",
+            "aiSuite": "/pricing",
+            "aiVoiceover": "/pricing",
+            "musicSfx": "/pricing",
+            "footageTemplates": "/pricing",
+            "seedanceArtMax": "/pricing",
+            "aiImageGenerators": "/pricing",
+            "videoGeneration": "/pricing",
+            "aiVoiceovers": "/pricing",
+            "businessPlan": "/pricing",
+            "textToVideo": "/pricing",
+            "imageToImage": "/pricing",
+            "voiceToVoice": "/pricing",
+            "voiceCloning": "/pricing",
+            "termsOfUse": "/terms",
+            "help": "/contact"
           }
         }
       },
