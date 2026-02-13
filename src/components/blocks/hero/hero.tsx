@@ -29,11 +29,24 @@ const FALLBACK_MODELS = [
   'Seedance',
   'Sora',
   'Veo',
-  'Nano Banana',
   'Kling',
+  'Nano Banana',
   'Z-Image',
   'Seedream',
 ];
+
+function swapKlingAndNanoBanana(items: ModelItem[]): ModelItem[] {
+  const next = [...items];
+  const klingIndex = next.findIndex((item) => item.key === 'kling');
+  const nanoIndex = next.findIndex((item) => item.key === 'nanobanana');
+
+  if (klingIndex === -1 || nanoIndex === -1) {
+    return next;
+  }
+
+  [next[klingIndex], next[nanoIndex]] = [next[nanoIndex], next[klingIndex]];
+  return next;
+}
 
 function toModelKey(name: string): ModelKey | null {
   const normalized = name.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -192,6 +205,7 @@ function ModelLogo({
 export default function HeroSection({ primaryHref }: HeroSectionProps) {
   const t = useTranslations('HomePage.hero');
   const [videoReady, setVideoReady] = useState(false);
+  const posterSrc = '/media/hero-poster.jpg';
   const rawModels = t.raw('models');
   const parsedModels = Array.isArray(rawModels)
     ? rawModels.filter((item): item is string => typeof item === 'string')
@@ -212,13 +226,22 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
     })
     .filter((item): item is ModelItem => item !== null);
 
-  const modelItems = currentItems.length === 7 ? currentItems : fallbackItems;
+  const modelItems = swapKlingAndNanoBanana(
+    currentItems.length === 7 ? currentItems : fallbackItems
+  );
   const mobileTopRow = modelItems.slice(0, 4);
   const mobileBottomRow = modelItems.slice(4);
 
   return (
     <section className="relative min-h-[78svh] overflow-hidden bg-black text-white md:min-h-[100svh]">
       <div className="absolute inset-0 z-0 hidden md:block">
+        <div
+          className={cn(
+            'absolute inset-0 bg-cover bg-center transition-opacity duration-700',
+            videoReady ? 'opacity-0' : 'opacity-100'
+          )}
+          style={{ backgroundImage: `url(${posterSrc})` }}
+        />
         <div className="absolute inset-0 z-10 bg-black/34" />
         <video
           autoPlay
@@ -226,7 +249,7 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
           loop
           playsInline
           preload="metadata"
-          poster="/media/hero-poster.jpg"
+          poster={posterSrc}
           onLoadedData={() => setVideoReady(true)}
           onCanPlay={() => setVideoReady(true)}
           className={cn(
@@ -243,6 +266,13 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
       <div className="relative md:hidden">
         {/* Video container: full width, ~1:1 aspect, extends under header */}
         <div className="relative w-full" style={{ aspectRatio: '1 / 1' }}>
+          <div
+            className={cn(
+              'absolute inset-0 bg-cover bg-center transition-opacity duration-700',
+              videoReady ? 'opacity-0' : 'opacity-100'
+            )}
+            style={{ backgroundImage: `url(${posterSrc})` }}
+          />
           <div className="absolute inset-0 z-10 bg-black/34" />
           <video
             autoPlay
@@ -250,7 +280,7 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
             loop
             playsInline
             preload="metadata"
-            poster="/media/hero-poster.jpg"
+            poster={posterSrc}
             onLoadedData={() => setVideoReady(true)}
             onCanPlay={() => setVideoReady(true)}
             className={cn(
@@ -302,11 +332,11 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
               <div className="pointer-events-none absolute inset-x-6 top-0 h-6 rounded-full bg-gradient-to-b from-white/20 to-transparent" />
 
               <div className="relative space-y-2.5">
-                <div className="grid grid-cols-4 gap-2">
+                <div className="flex items-center justify-center gap-3">
                   {mobileTopRow.map((item) => (
                     <span
                       key={item.key}
-                      className="flex w-full min-w-0 items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
+                      className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
                     >
                       <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center">
                         <ModelLogo model={item.key} />
@@ -318,11 +348,11 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
                   ))}
                 </div>
 
-                <div className="mx-auto grid max-w-[75%] grid-cols-3 gap-2">
+                <div className="mx-auto flex items-center justify-center gap-3">
                   {mobileBottomRow.map((item) => (
                     <span
                       key={item.key}
-                      className="flex w-full min-w-0 items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
+                      className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-white/90"
                     >
                       <span className="inline-flex h-4 w-4 shrink-0 items-center justify-center">
                         <ModelLogo model={item.key} />
@@ -382,11 +412,11 @@ export default function HeroSection({ primaryHref }: HeroSectionProps) {
             <div className="relative rounded-full border border-white/12 px-6 py-3.5 backdrop-blur-[2px]">
               <div className="pointer-events-none absolute inset-x-10 top-0 h-8 rounded-full bg-gradient-to-b from-white/30 to-transparent" />
 
-              <div className="relative grid grid-cols-7 items-center gap-x-1.5">
+              <div className="relative flex items-center justify-center gap-6">
                 {modelItems.map((item) => (
                   <span
                     key={item.key}
-                    className="flex w-full min-w-0 items-center justify-center gap-2 whitespace-nowrap text-[0.98rem] text-white/95"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-[0.98rem] text-white/95"
                   >
                     <span className="inline-flex h-[18px] w-[18px] items-center justify-center text-white/95">
                       <ModelLogo model={item.key} />
