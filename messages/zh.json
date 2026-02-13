@@ -752,7 +752,7 @@
     "hero": {
       "title": "一键生成商用级 AI 视频",
       "description": "多镜头叙事更稳，人物与场景更一致。",
-      "primary": "免费开始生成",
+      "primary": "免费开始",
       "models": [
         "Seedance",
         "Sora",
