@@ -21,13 +21,13 @@ export const websiteConfig: WebsiteConfig = {
       logoDark: '/logo-dark.png',
     },
     social: {
-      github: 'https://github.com/MkSaaSHQ',
-      twitter: 'https://mksaas.link/twitter',
-      blueSky: 'https://mksaas.link/bsky',
-      discord: 'https://mksaas.link/discord',
-      mastodon: 'https://mksaas.link/mastodon',
-      linkedin: 'https://mksaas.link/linkedin',
-      youtube: 'https://mksaas.link/youtube',
+      github: 'https://github.com/seedance-art',
+      twitter: 'https://x.com/seedanceart',
+      blueSky: 'https://bsky.app/profile/seedanceart.com',
+      discord: 'https://discord.gg/seedanceart',
+      mastodon: 'https://mastodon.social/@seedanceart',
+      linkedin: 'https://www.linkedin.com/company/seedanceart',
+      youtube: 'https://www.youtube.com/@seedanceart',
     },
   },
   features: {
@@ -79,8 +79,8 @@ export const websiteConfig: WebsiteConfig = {
   },
   mail: {
     provider: 'resend',
-    fromEmail: 'MkSaaS <support@example.com>',
-    supportEmail: 'MkSaaS <support@example.com>',
+    fromEmail: 'SeedanceArt <support@example.com>',
+    supportEmail: 'SeedanceArt <support@example.com>',
   },
   newsletter: {
     enable: true,
