@@ -793,7 +793,6 @@
       },
       "featuredModels": {
         "title": "精选 AI 模型",
-        "newBadge": "新",
         "scrollLeftAria": "向左滚动精选模型",
         "scrollRightAria": "向右滚动精选模型",
         "paginationAria": "跳转到第 {page} 页精选模型",

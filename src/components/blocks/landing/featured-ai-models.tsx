@@ -50,7 +50,6 @@ interface ModelCard {
     | 'models.minimax_speech_4.description';
   image: string;
   logo: string;
-  isNew?: boolean;
 }
 
 const CARDS_PER_STEP = 2;
@@ -61,7 +60,6 @@ const MODELS: ModelCard[] = [
     descriptionKey: 'models.seedance_2_0.description',
     image: '/media/featured_ai_models/seedance-2-0.avif',
     logo: '/media/featured_ai_models/logos/bytedance.svg',
-    isNew: true,
   },
   {
     nameKey: 'models.kling_2_6.name',
@@ -283,11 +281,6 @@ export default function FeaturedAiModels() {
                   className="object-cover"
                   sizes="(min-width: 640px) 280px, 220px"
                 />
-                {model.isNew && (
-                  <span className="absolute left-3 top-3 z-10 rounded bg-amber-500 px-2 py-0.5 text-xs font-bold text-black">
-                    {t('newBadge')}
-                  </span>
-                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4">
                   <div className="flex items-center gap-2">

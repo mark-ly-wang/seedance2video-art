@@ -793,7 +793,6 @@
       },
       "featuredModels": {
         "title": "Featured AI Models",
-        "newBadge": "NEW",
         "scrollLeftAria": "Scroll featured models left",
         "scrollRightAria": "Scroll featured models right",
         "paginationAria": "Go to featured models page {page}",
