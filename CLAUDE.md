@@ -5,21 +5,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Core Development
-- `pnpm dev` - Start development server with content collections
-- `pnpm build` - Build the application and content collections
-- `pnpm start` - Start production server
-- `pnpm lint` - Run Biome linter (use for code quality checks)
-- `pnpm format` - Format code with Biome
+- `corepack pnpm@10.26.1 dev` - Start development server with content collections
+- `corepack pnpm@10.26.1 build` - Build the application and content collections
+- `corepack pnpm@10.26.1 start` - Start production server
+- `corepack pnpm@10.26.1 lint` - Run Biome linter (use for code quality checks)
+- `corepack pnpm@10.26.1 format` - Format code with Biome
 
 ### Database Operations (Drizzle ORM)
-- `pnpm db:generate` - Generate new migration files based on schema changes
-- `pnpm db:migrate` - Apply pending migrations to the database
-- `pnpm db:push` - Sync schema changes directly to the database (development only)
-- `pnpm db:studio` - Open Drizzle Studio for database inspection and management
+- `corepack pnpm@10.26.1 db:generate` - Generate new migration files based on schema changes
+- `corepack pnpm@10.26.1 db:migrate` - Apply pending migrations to the database
+- `corepack pnpm@10.26.1 db:push` - Sync schema changes directly to the database (development only)
+- `corepack pnpm@10.26.1 db:studio` - Open Drizzle Studio for database inspection and management
 
 ### Content and Email
-- `pnpm content` - Process MDX content collections
-- `pnpm email` - Start email template development server on port 3333
+- `corepack pnpm@10.26.1 content` - Process MDX content collections
+- `corepack pnpm@10.26.1 email` - Start email template development server on port 3333
+
+## Branding & Theme (Project Truth)
+
+Branding:
+- Product name: `SeedanceArt`
+- Logos: `public/logo.png`, `public/logo-dark.png`
+
+Theme:
+- Single theme semantics only (MkSaaS style): use `primary`, `accent`, `ring`, `foreground/background`, etc.
+- Do NOT introduce parallel brand token families like `cta/*`.
+- Do NOT hardcode brand colors in components (no `#...`, `rgb(...)`, `oklch(...)` in JSX).
+- Brand palette is yellow, defined centrally in `src/styles/globals.css` via semantic tokens.
 
 ## Project Architecture
 
@@ -101,7 +113,7 @@ This is a Next.js full-stack SaaS application with the following key architectur
 
 ## Important Notes
 
-- The project uses pnpm as the package manager
+- The project uses pnpm as the package manager (pinned: `pnpm@10.26.1` via Corepack)
 - Database schema is in `src/db/schema.ts` with auth, payment, and credit tables
 - Email templates are in `src/mail/templates/`
 - The app supports both light and dark themes

@@ -17,6 +17,31 @@ All guidance here is derived from the current codebase/config.
    - `corepack pnpm@10.26.1 -s lint`
    - `corepack pnpm@10.26.1 -s build`
 
+## 1.1) Branding + Theme (Project Truth)
+
+Branding:
+- Product name: `SeedanceArt`
+- Logos: `public/logo.png`, `public/logo-dark.png`
+
+Theme semantics (single-layer MkSaaS semantics):
+- Only use semantic tokens: `primary`, `accent`, `ring`, `foreground/background`, etc.
+- Do NOT introduce parallel brand token families like `cta/*`.
+- Do NOT hardcode brand colors in components (no `#...`, `rgb(...)`, `oklch(...)` in JSX).
+- If a UI element must be brand-colored, express it via semantic utilities:
+  - Color: `bg-primary`, `text-primary`, `border-primary`
+  - Hover: `hover:bg-accent`, `hover:text-accent-foreground`
+  - Focus: `focus-visible:ring-ring/50`, `focus-visible:border-ring`
+
+Current brand palette is yellow and is defined centrally in `src/styles/globals.css` via the semantic tokens above.
+
+CTA button styling (glass, no center-out gradient):
+- Prefer a frosted-glass look (blur + highlight) over multi-stop gradients.
+- Avoid `from-primary via-accent to-primary` for CTAs (center-to-sides gradient looks muddy).
+- Reference implementation lives in:
+  - `src/components/blocks/hero/hero.tsx`
+  - `src/components/blocks/landing/toolkit-showcase.tsx`
+If you need reuse, extract a shared variant/component, but keep the semantics (primary/accent/ring) unchanged.
+
 ## 2) Canonical Commands
 Use pinned package manager version from `package.json` (`pnpm@10.26.1`).
 
