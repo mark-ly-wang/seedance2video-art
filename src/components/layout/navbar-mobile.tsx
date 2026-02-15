@@ -178,7 +178,7 @@ function MainMobileMenu({ userLoggedIn, onLinkClicked }: MainMobileMenuProps) {
                   variant: 'default',
                   size: 'lg',
                 }),
-                'w-full border-[#f3d13e] bg-[#FFD700] text-black hover:bg-[#ffe34a] hover:text-black'
+                'w-full'
               )}
               onClick={onLinkClicked}
             >

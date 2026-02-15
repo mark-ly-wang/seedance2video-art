@@ -50,7 +50,7 @@ export default function FaqSection() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-24">
           <div>
-            <span className="text-sm font-bold tracking-widest text-[#FFD700] uppercase">
+            <span className="text-sm font-bold tracking-widest text-primary uppercase">
               {t('title')}
             </span>
             <h2 className="mt-4 text-balance font-bricolage-grotesque text-4xl font-bold leading-[0.95] tracking-tight text-white sm:text-5xl">
@@ -65,7 +65,7 @@ export default function FaqSection() {
                 value={item.id}
                 className="border-none bg-white/[0.03] px-6 transition-colors hover:bg-white/[0.05]"
               >
-                <AccordionTrigger className="py-6 text-left text-lg font-medium text-white hover:no-underline hover:text-[#FFD700]">
+                <AccordionTrigger className="py-6 text-left text-lg font-medium text-white hover:no-underline hover:text-primary">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 text-base leading-7 text-white/60">

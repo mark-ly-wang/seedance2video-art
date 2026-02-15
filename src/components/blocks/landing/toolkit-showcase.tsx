@@ -39,11 +39,11 @@ export default function ToolkitShowcase({
                 <Button
                   asChild
                   size="lg"
-                  className="group relative h-12 w-full overflow-hidden rounded-full border border-white/20 bg-gradient-to-br from-[#FFD700] via-[#F4DC6A] to-[#FFD700] px-10 text-base font-semibold text-black/90 shadow-[0_0_20px_rgba(255,215,0,0.3)] backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#ffe033] hover:via-[#ffeb85] hover:to-[#ffe033] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]"
+                  className="group relative h-12 w-full overflow-hidden rounded-full border border-white/30 bg-primary/88 px-10 text-base font-semibold text-primary-foreground shadow-lg backdrop-blur-xl supports-[backdrop-filter]:bg-primary/75 transition-all duration-300 hover:scale-[1.01] hover:bg-primary/95 hover:shadow-xl active:scale-[0.99]"
                 >
                   <LocaleLink href={ctaHref}>
                     <span className="relative z-10">{ctaLabel}</span>
-                    <div className="absolute inset-x-0 top-0 h-[50%] bg-gradient-to-b from-white/40 to-transparent opacity-100" />
+                    <div className="absolute inset-x-0 top-0 h-[50%] bg-gradient-to-b from-white/32 to-transparent opacity-100" />
                   </LocaleLink>
                 </Button>
               </div>
@@ -52,11 +52,11 @@ export default function ToolkitShowcase({
                 <Button
                   asChild
                   size="lg"
-                  className="group relative h-12 overflow-hidden rounded-full border border-white/20 bg-gradient-to-br from-[#FFD700] via-[#F4DC6A] to-[#FFD700] px-10 text-base font-semibold text-black/90 shadow-[0_0_20px_rgba(255,215,0,0.3)] backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-[#ffe033] hover:via-[#ffeb85] hover:to-[#ffe033] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]"
+                  className="group relative h-12 overflow-hidden rounded-full border border-white/30 bg-primary/88 px-10 text-base font-semibold text-primary-foreground shadow-lg backdrop-blur-xl supports-[backdrop-filter]:bg-primary/75 transition-all duration-300 hover:scale-[1.01] hover:bg-primary/95 hover:shadow-xl active:scale-[0.99]"
                 >
                   <LocaleLink href={ctaHref}>
                     <span className="relative z-10">{ctaLabel}</span>
-                    <div className="absolute inset-x-0 top-0 h-[50%] bg-gradient-to-b from-white/40 to-transparent opacity-100" />
+                    <div className="absolute inset-x-0 top-0 h-[50%] bg-gradient-to-b from-white/32 to-transparent opacity-100" />
                   </LocaleLink>
                 </Button>
               </div>
